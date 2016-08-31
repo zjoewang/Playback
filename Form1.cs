@@ -18,7 +18,8 @@ namespace Playback
         private bool m_bPaused = false;
         private int m_nStep = -1;
         private string m_logFile = "";
-        System.IO.StreamReader m_srLog = null;
+        private System.IO.StreamReader m_srLog = null;
+        private int m_nLastTimeStamp = -1;
 
         public Form1()
         {
@@ -139,9 +140,18 @@ namespace Playback
 
                     if (found_hrsp)
                     {
-                        label3.Text = "HR=" + hr.ToString() + ", SP=" + sp.ToString();
-                        label4.Text = "HR=" + hr.ToString() + ", SP=" + sp.ToString();
+                        chart1.Series["HR"].Points.AddXY(m_nLastTimeStamp, 100.0 * hr);
+                        chart1.Series["SP"].Points.AddXY(m_nLastTimeStamp, 100.0 * sp);
+
+                        label3.Text = "HR = " + hr.ToString() + ", SP = " + sp.ToString();
+                        label4.Text = "HR = " + hr.ToString() + ", SP = " + sp.ToString();
                         break;
+                    }
+                    else if (found_rawdata)
+                    {
+                        chart1.Series["Red"].Points.AddXY(time, red);
+                        chart1.Series["IR"].Points.AddXY(time, ir);
+                        m_nLastTimeStamp = time;
                     }
                 }
 
