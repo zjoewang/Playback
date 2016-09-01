@@ -20,6 +20,13 @@ namespace Playback
         private string m_logFile = "";
         private System.IO.StreamReader m_srLog = null;
         private int m_nLastTimeStamp = -1;
+        private int[] m_red_buffer = new int[Algorithm30102.BUFFER_SIZE];
+        private int[] m_ir_buffer = new int[Algorithm30102.BUFFER_SIZE];
+        private const int MAX_TEMP_SIZE = 10 * Algorithm30102.BUFFER_SIZE;
+        private int[] m_temp_red_buffer = new int[MAX_TEMP_SIZE];
+        private int[] m_temp_ir_buffer = new int[MAX_TEMP_SIZE];
+        private int m_nBufferSize = 0;
+        private Algorithm30102 m_alg = new Algorithm30102();
 
         public Form1()
         {
@@ -66,6 +73,13 @@ namespace Playback
                 }
 
                 m_nStep = 0;
+                m_nBufferSize = 0;
+                chart1.Series["HR"].Points.Clear();
+                chart1.Series["SP"].Points.Clear();
+                chart1.Series["newHR"].Points.Clear();
+                chart1.Series["newSP"].Points.Clear();
+                chart1.Series["Red"].Points.Clear();
+                chart1.Series["IR"].Points.Clear();
                 button2.Enabled = false;
                 timer1.Start();
             }
@@ -86,7 +100,13 @@ namespace Playback
         {
             // Restart
             if (m_bInited && m_srLog != null)
-                m_nStep = 0;
+            {
+                m_nStep = -1;
+                m_srLog.Close();
+                m_srLog = null;
+                timer1.Stop();
+                button2_Click(sender, e);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -105,8 +125,9 @@ namespace Playback
                 label7.Text = m_nStep.ToString();
 
                 int count = 0;
+                int nTempSize = 0;
 
-                while ((line = m_srLog.ReadLine()) != null && ++count < 111)
+                while ((line = m_srLog.ReadLine()) != null)
                 {
                     Match match;
 
@@ -136,22 +157,108 @@ namespace Playback
                         }
                     }
 
-                    Debug.Assert(found_rawdata || found_hrsp);
-
                     if (found_hrsp)
                     {
-                        chart1.Series["HR"].Points.AddXY(m_nLastTimeStamp, 100.0 * hr);
-                        chart1.Series["SP"].Points.AddXY(m_nLastTimeStamp, 100.0 * sp);
+                        chart1.Series["HR"].Points.AddXY(m_nLastTimeStamp, hr);
+                        chart1.Series["SP"].Points.AddXY(m_nLastTimeStamp, sp);
 
-                        label3.Text = "HR = " + hr.ToString() + ", SP = " + sp.ToString();
+                        // Original values
                         label4.Text = "HR = " + hr.ToString() + ", SP = " + sp.ToString();
+
+                        int nTotalSize = m_nBufferSize + nTempSize;
+
+                        if (nTempSize >= Algorithm30102.BUFFER_SIZE)
+                        {
+                            // Temp is enough
+                            int nLeftShift = nTempSize - Algorithm30102.BUFFER_SIZE;
+
+                            for (int i = 0; i < Algorithm30102.BUFFER_SIZE; ++i)
+                            {
+                                m_red_buffer[i] = m_temp_red_buffer[i + nLeftShift];
+                                m_ir_buffer[i] = m_temp_ir_buffer[i + nLeftShift];
+                            }
+
+                            m_nBufferSize = Algorithm30102.BUFFER_SIZE;
+                        }
+                        else if (nTotalSize > Algorithm30102.BUFFER_SIZE)
+                        {
+                            // Need to left-shift the most recent data on the system buffer
+                            int nKeep = Algorithm30102.BUFFER_SIZE - nTempSize;
+                            int nLeftShift = m_nBufferSize - nKeep;
+
+                            for (int i = 0; i < nKeep; ++i)
+                            {
+                                m_red_buffer[i] = m_red_buffer[i + nLeftShift];
+                                m_ir_buffer[i] = m_ir_buffer[i + nLeftShift];
+                            }
+
+                            // Then copy the whole temp to fill the system buffer
+                            for (int i = nKeep; i < Algorithm30102.BUFFER_SIZE; ++i)
+                            {
+                                m_red_buffer[i] = m_temp_red_buffer[i - nKeep];
+                                m_ir_buffer[i] = m_temp_ir_buffer[i - nKeep];
+                            }
+
+                            m_nBufferSize = Algorithm30102.BUFFER_SIZE;
+                        }
+                        else
+                        {
+                            // Just add the temp to the system buffer
+                            for (int i = m_nBufferSize; i < nTotalSize; ++i)
+                            {
+                                m_red_buffer[i] = m_temp_red_buffer[i - m_nBufferSize];
+                                m_ir_buffer[i] = m_temp_ir_buffer[i - m_nBufferSize];
+                            }
+
+                            m_nBufferSize = nTotalSize;
+                        }
+
+                        if (m_nBufferSize >= Algorithm30102.BUFFER_SIZE)
+                        {
+                            Debug.Assert(m_nBufferSize == Algorithm30102.BUFFER_SIZE);
+
+                            int nNewHR, nNewSP;
+                            bool bHRValid, bSPValid;
+
+                            m_alg.maxim_heart_rate_and_oxygen_saturation(m_ir_buffer, m_nBufferSize, m_red_buffer,
+                                out nNewSP, out bSPValid, out nNewHR, out bHRValid);
+
+                            if (!bHRValid)
+                                nNewHR = -1;
+
+                            if (!bSPValid)
+                                nNewSP = -1;
+
+                            label3.Text = "HR = " + nNewHR.ToString() + ", SP = " + nNewSP.ToString();
+
+                            if (nNewHR > 0)
+                                chart1.Series["newHR"].Points.AddXY(m_nLastTimeStamp, nNewHR);
+
+                            if (nNewSP > 0)
+                                chart1.Series["newSP"].Points.AddXY(m_nLastTimeStamp, nNewSP);
+                        }
+                        else
+                            label3.Text = "Not enough raw data";
+
                         break;
                     }
                     else if (found_rawdata)
                     {
+                        if (count < MAX_TEMP_SIZE)
+                        {
+                            m_temp_red_buffer[count] = red;
+                            m_temp_ir_buffer[count] = ir;
+                            nTempSize = count + 1;
+                        }
+
                         chart1.Series["Red"].Points.AddXY(time, red);
                         chart1.Series["IR"].Points.AddXY(time, ir);
                         m_nLastTimeStamp = time;
+                        ++count;
+                    }
+                    else
+                    {
+                        // Debug.Assert(found_rawdata || found_hrsp);
                     }
                 }
 

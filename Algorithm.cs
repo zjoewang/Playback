@@ -2,10 +2,10 @@
 
 namespace Playback
 {
-    public class Algorithm32102
+    public class Algorithm30102
     {
-        const int FS = 100;
-        const int BUFFER_SIZE = FS * 5;
+        public const int FS = 100;
+        public const int BUFFER_SIZE = FS * 5;
         const int HR_FIFO_SIZE  = 7;
         const int MA4_SIZE = 4;     // DO NOT CHANGE
         const int HAMMING_SIZE = 5;     // DO NOT CHANGE
@@ -47,7 +47,7 @@ namespace Playback
          *
          * \retval       None
          */
-        void maxim_heart_rate_and_oxygen_saturation(int[] pun_ir_buffer, int n_ir_buffer_length, int[] pun_red_buffer, out int pn_spo2, out bool pch_spo2_valid,
+        public void maxim_heart_rate_and_oxygen_saturation(int[] pun_ir_buffer, int n_ir_buffer_length, int[] pun_red_buffer, out int pn_spo2, out bool pch_spo2_valid,
                 out int pn_heart_rate, out bool pch_hr_valid)
         {
             int un_ir_mean, un_only_once;
@@ -67,9 +67,14 @@ namespace Playback
 
             // Remove DC of ir signal    
             un_ir_mean = 0;
-            for (k = 0; k < n_ir_buffer_length; k++) un_ir_mean += pun_ir_buffer[k];
+
+            for (k = 0; k < n_ir_buffer_length; k++)
+                un_ir_mean += pun_ir_buffer[k];
+
             un_ir_mean = un_ir_mean / n_ir_buffer_length;
-            for (k = 0; k < n_ir_buffer_length; k++) an_x[k] = pun_ir_buffer[k] - un_ir_mean;
+
+            for (k = 0; k < n_ir_buffer_length; k++)
+                an_x[k] = pun_ir_buffer[k] - un_ir_mean;
 
             // 4 pt Moving Average
             for (k = 0; k < BUFFER_SIZE - MA4_SIZE; k++)
@@ -78,7 +83,7 @@ namespace Playback
                 an_x[k] = n_denom / (int)4;
             }
 
-            // get difference of smoothed IR signal
+            // Get difference of smoothed IR signal
             for (k = 0; k < BUFFER_SIZE - MA4_SIZE - 1; k++)
                 an_dx[k] = (an_x[k + 1] - an_x[k]);
 
@@ -86,14 +91,14 @@ namespace Playback
             for (k = 0; k < BUFFER_SIZE - MA4_SIZE - 2; k++)
                 an_dx[k] = (an_dx[k] + an_dx[k + 1]) / 2;
 
-            // hamming window: flip wave form so that we can detect valley with peak detector
+            // Hamming window: flip wave form so that we can detect valley with peak detector
             for (i = 0; i < BUFFER_SIZE - HAMMING_SIZE - MA4_SIZE - 2; i++)
             {
                 s = 0;
+
                 for (k = i; k < i + HAMMING_SIZE; k++)
-                {
                     s -= an_dx[k] * auw_hamm[k - i];
-                }
+
                 an_dx[i] = s / (int)1146; // divide by sum of auw_hamm 
             }
 
@@ -127,15 +132,15 @@ namespace Playback
             for (k = 0; k < n_npks; k++)
                 an_ir_valley_locs[k] = an_dx_peak_locs[k] + HAMMING_SIZE / 2;
 
-            // raw value : RED(=y) and IR(=X)
-            // we need to assess DC and AC value of ir and red PPG. 
+            // Raw value : RED(=y) and IR(=X)
+            // We need to assess DC and AC value of ir and red PPG. 
             for (k = 0; k < n_ir_buffer_length; k++)
             {
                 an_x[k] = pun_ir_buffer[k];
                 an_y[k] = pun_red_buffer[k];
             }
 
-            // find precise min near an_ir_valley_locs
+            // Find precise min near an_ir_valley_locs
             n_exact_ir_valley_locs_count = 0;
 
             for (k = 0; k < n_npks; k++)
@@ -168,6 +173,7 @@ namespace Playback
             {
                 pn_spo2 = -999; // do not use SPO2 since signal ratio is out of range
                 pch_spo2_valid = false;
+
                 return;
             }
 
@@ -178,12 +184,13 @@ namespace Playback
                 an_y[k] = (an_y[k] + an_y[k + 1] + an_y[k + 2] + an_y[k + 3]) / (int)4;
             }
 
-            //using an_exact_ir_valley_locs , find ir-red DC andir-red AC for SPO2 calibration ratio
-            //finding AC/DC maximum of raw ir * red between two valley locations
+            // Using an_exact_ir_valley_locs , find ir-red DC andir-red AC for SPO2 calibration ratio
+            // Finding AC/DC maximum of raw ir * red between two valley locations
             n_ratio_average = 0;
             n_i_ratio_count = 0;
 
-            for (k = 0; k < 5; k++) an_ratio[k] = 0;
+            for (k = 0; k < 5; k++)
+                an_ratio[k] = 0;
 
             for (k = 0; k < n_exact_ir_valley_locs_count; k++)
             {
@@ -191,11 +198,12 @@ namespace Playback
                 {
                     pn_spo2 = -999; // do not use SPO2 since valley loc is out of range
                     pch_spo2_valid = false;
+
                     return;
                 }
             }
 
-            // find max between two valley locations 
+            // Find max between two valley locations 
             // and use ratio betwen AC compoent of Ir & Red and DC compoent of Ir & Red for SPO2 
             for (k = 0; k < n_exact_ir_valley_locs_count - 1; k++)
             {
@@ -366,8 +374,10 @@ namespace Playback
             for (i = 1; i < n_size; i++)
             {
                 n_temp = pn_indx[i];
+
                 for (j = i; j > 0 && pn_x[n_temp] > pn_x[pn_indx[j - 1]]; j--)
                     pn_indx[j] = pn_indx[j - 1];
+
                 pn_indx[j] = n_temp;
             }
         }
