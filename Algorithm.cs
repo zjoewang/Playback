@@ -109,7 +109,7 @@ namespace Playback
 
             n_th1 = n_th1 / (BUFFER_SIZE - HAMMING_SIZE);
 
-            // peak location is acutally index for sharpest location of raw signal since we flipped the signal         
+            // Peak location is acutally index for sharpest location of raw signal since we flipped the signal         
             maxim_find_peaks(an_dx_peak_locs, out n_npks, an_dx, BUFFER_SIZE - HAMMING_SIZE, n_th1, 8, 5);//peak_height, peak_distance, max_num_peaks 
 
             n_peak_interval_sum = 0;
@@ -120,7 +120,7 @@ namespace Playback
                     n_peak_interval_sum += (an_dx_peak_locs[k] - an_dx_peak_locs[k - 1]);
 
                 n_peak_interval_sum = n_peak_interval_sum / (n_npks - 1);
-                pn_heart_rate = (int)(6000 / n_peak_interval_sum);// beats per minutes
+                pn_heart_rate = (int)(6000 / n_peak_interval_sum);      // Beats per minutes
                 pch_hr_valid = true;
             }
             else
@@ -147,7 +147,7 @@ namespace Playback
             {
                 un_only_once = 1;
                 m = an_ir_valley_locs[k];
-                n_c_min = 16777216;//2^24;
+                n_c_min = 16777216;     //2^24;
 
                 if (m + 5 < BUFFER_SIZE - HAMMING_SIZE && m - 5 > 0)
                 {
@@ -293,9 +293,11 @@ namespace Playback
                         n_width++;
 
                     if (pn_x[i] > pn_x[i + n_width] && pn_npks < 15)
-                    {                            // find right edge of peaks
+                    {
+                        // Find right edge of peaks
                         pn_locs[pn_npks++] = i;
-                        // for flat peaks, peak location is left edge
+
+                        // For flat peaks, peak location is left edge
                         i += n_width + 1;
                     }
                     else
@@ -317,7 +319,7 @@ namespace Playback
         {
             int i, j, n_old_npks, n_dist;
 
-            /* Order peaks from large to small */
+            // Order peaks from large to small
             maxim_sort_indices_descend(pn_x, pn_locs, pn_npks);
 
             for (i = -1; i < pn_npks; i++)
