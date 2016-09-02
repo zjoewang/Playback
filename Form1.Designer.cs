@@ -86,9 +86,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 13);
+            this.label1.Size = new System.Drawing.Size(296, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Copyright(c) 2016 Equine SmartBit LLC";
+            this.label1.Text = "Copyright(c) 2016 Equine SmartBit LLC.  Released on 9/1/16";
             // 
             // label2
             // 
@@ -200,6 +200,10 @@
             // 
             // chart1
             // 
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisX2.MajorGrid.Enabled = false;
+            chartArea2.AxisY.MajorGrid.Enabled = false;
+            chartArea2.AxisY2.MajorGrid.Enabled = false;
             chartArea2.CursorX.IsUserEnabled = true;
             chartArea2.CursorX.IsUserSelectionEnabled = true;
             chartArea2.CursorY.IsUserEnabled = true;
@@ -238,12 +242,14 @@
             series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             series11.Color = System.Drawing.Color.Green;
             series11.Legend = "Legend1";
+            series11.MarkerSize = 8;
             series11.Name = "newHR";
             series11.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
             series12.ChartArea = "ChartArea1";
             series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             series12.Color = System.Drawing.Color.Olive;
             series12.Legend = "Legend1";
+            series12.MarkerSize = 8;
             series12.Name = "newSP";
             series12.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
             this.chart1.Series.Add(series7);

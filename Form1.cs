@@ -165,6 +165,10 @@ namespace Playback
                         // Original values
                         label4.Text = "HR = " + hr.ToString() + ", SP = " + sp.ToString();
 
+                    }
+
+                    if (found_hrsp || count >= 100)
+                    {
                         int nTotalSize = m_nBufferSize + nTempSize;
 
                         if (nTempSize >= Algorithm30102.BUFFER_SIZE)
@@ -217,11 +221,19 @@ namespace Playback
                         {
                             Debug.Assert(m_nBufferSize == Algorithm30102.BUFFER_SIZE);
 
-                            int nNewHR, nNewSP;
+                            int nNewHR = -1, nNewSP = -1;
                             bool bHRValid, bSPValid;
 
-                            m_alg.maxim_heart_rate_and_oxygen_saturation(m_ir_buffer, m_nBufferSize, m_red_buffer,
-                                out nNewSP, out bSPValid, out nNewHR, out bHRValid);
+                            try
+                            {
+                                m_alg.maxim_heart_rate_and_oxygen_saturation(m_ir_buffer, m_nBufferSize, m_red_buffer,
+                                    out nNewSP, out bSPValid, out nNewHR, out bHRValid);
+                            }
+                            catch
+                            {
+                                bHRValid = bSPValid = false;
+                            }
+
 
                             if (!bHRValid)
                                 nNewHR = -1;
