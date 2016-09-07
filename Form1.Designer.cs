@@ -68,7 +68,7 @@
             // 
             this.openFileDialog1.DefaultExt = "*.log";
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "Log files|*.log;*.txt|All files|*.*";
+            this.openFileDialog1.Filter = "Log files|*.log;*.txt;*.csv|All files|*.*";
             this.openFileDialog1.Title = "Select USB logfile";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 

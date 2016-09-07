@@ -129,31 +129,38 @@ namespace Playback
 
                 while ((line = m_srLog.ReadLine()) != null)
                 {
-                    Match match;
-
-                    match = Regex.Match(line, @"time=(\d+), red=(\d+), ir=(\d+)");
+                    Match match = Regex.Match(line, @"HR=(\d+), SP=(\d+)");
 
                     int time = -1, red = -1, ir = -1, hr = -1, sp = -1;
                     bool found_rawdata = false, found_hrsp = false;
 
-                    if (match.Success && match.Groups.Count == 4)
+                    if (match.Success && match.Groups.Count == 3)
                     {
-                        time = Convert.ToInt32(match.Groups[1].Value);
-                        red = Convert.ToInt32(match.Groups[2].Value);
-                        ir = Convert.ToInt32(match.Groups[3].Value);
+                        hr = Convert.ToInt32(match.Groups[1].Value);
+                        sp = Convert.ToInt32(match.Groups[2].Value);
 
-                        found_rawdata = true;
+                        found_hrsp = true;
                     }
                     else
                     {
-                        match = Regex.Match(line, @"HR=(\d+), SP=(\d+)");
+                        match = Regex.Match(line, @"time=(\d+), red=(\d+), ir=(\d+)");
 
-                        if (match.Success && match.Groups.Count == 3)
+                        if (match.Success && match.Groups.Count == 4)
+                            found_rawdata = true;
+                        else 
                         {
-                            hr = Convert.ToInt32(match.Groups[1].Value);
-                            sp = Convert.ToInt32(match.Groups[2].Value);
+                            // CSV type
+                            match = Regex.Match(line, @"\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)");
 
-                            found_hrsp = true;
+                            if (match.Success && match.Groups.Count == 4)
+                                found_rawdata = true;
+                        }
+
+                        if (found_rawdata)
+                        {
+                            time = Convert.ToInt32(match.Groups[1].Value);
+                            red = Convert.ToInt32(match.Groups[2].Value);
+                            ir = Convert.ToInt32(match.Groups[3].Value);
                         }
                     }
 
