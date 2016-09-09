@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 
 namespace Playback
 {
@@ -47,9 +50,12 @@ namespace Playback
          *
          * \retval       None
          */
-        public void maxim_heart_rate_and_oxygen_saturation(int[] pun_ir_buffer, int n_ir_buffer_length, int[] pun_red_buffer, out int pn_spo2, out bool pch_spo2_valid,
+        public void maxim_heart_rate_and_oxygen_saturation(IEnumerable<int> pun_ir_buffer_IEnum, int n_ir_buffer_length, IEnumerable<int> pun_red_buffer_IEnum, out int pn_spo2, out bool pch_spo2_valid,
                 out int pn_heart_rate, out bool pch_hr_valid)
         {
+            int[] pun_ir_buffer = pun_ir_buffer_IEnum.ToArray();
+            int[] pun_red_buffer = pun_red_buffer_IEnum.ToArray();
+
             int un_ir_mean, un_only_once;
             int k, n_i_ratio_count;
             int i, s, m, n_exact_ir_valley_locs_count, n_middle_idx;
@@ -65,6 +71,9 @@ namespace Playback
             int[] an_ratio = new int[5];
             int n_ratio_average, n_nume, n_denom;
 
+            Debug.Assert(pun_red_buffer.Length <= pun_ir_buffer.Length);
+            Debug.Assert(n_ir_buffer_length <= pun_ir_buffer.Length);
+
             // Remove DC of ir signal    
             un_ir_mean = 0;
 
@@ -77,22 +86,22 @@ namespace Playback
                 an_x[k] = pun_ir_buffer[k] - un_ir_mean;
 
             // 4 pt Moving Average
-            for (k = 0; k < BUFFER_SIZE - MA4_SIZE; k++)
+            for (k = 0; k < n_ir_buffer_length - MA4_SIZE; k++)
             {
                 n_denom = (an_x[k] + an_x[k + 1] + an_x[k + 2] + an_x[k + 3]);
                 an_x[k] = n_denom / (int)4;
             }
 
             // Get difference of smoothed IR signal
-            for (k = 0; k < BUFFER_SIZE - MA4_SIZE - 1; k++)
+            for (k = 0; k < n_ir_buffer_length - MA4_SIZE - 1; k++)
                 an_dx[k] = (an_x[k + 1] - an_x[k]);
 
             // 2-pt Moving Average to an_dx
-            for (k = 0; k < BUFFER_SIZE - MA4_SIZE - 2; k++)
+            for (k = 0; k < n_ir_buffer_length - MA4_SIZE - 2; k++)
                 an_dx[k] = (an_dx[k] + an_dx[k + 1]) / 2;
 
             // Hamming window: flip wave form so that we can detect valley with peak detector
-            for (i = 0; i < BUFFER_SIZE - HAMMING_SIZE - MA4_SIZE - 2; i++)
+            for (i = 0; i < n_ir_buffer_length - HAMMING_SIZE - MA4_SIZE - 2; i++)
             {
                 s = 0;
 
@@ -104,13 +113,13 @@ namespace Playback
 
             n_th1 = 0; // threshold calculation
 
-            for (k = 0; k < BUFFER_SIZE - HAMMING_SIZE; k++)
+            for (k = 0; k < n_ir_buffer_length - HAMMING_SIZE; k++)
                 n_th1 += ((an_dx[k] > 0) ? an_dx[k] : ((int)0 - an_dx[k]));
 
-            n_th1 = n_th1 / (BUFFER_SIZE - HAMMING_SIZE);
+            n_th1 = n_th1 / (n_ir_buffer_length - HAMMING_SIZE);
 
             // Peak location is acutally index for sharpest location of raw signal since we flipped the signal         
-            maxim_find_peaks(an_dx_peak_locs, out n_npks, an_dx, BUFFER_SIZE - HAMMING_SIZE, n_th1, 8, 5);//peak_height, peak_distance, max_num_peaks 
+            maxim_find_peaks(an_dx_peak_locs, out n_npks, an_dx, n_ir_buffer_length - HAMMING_SIZE, n_th1, 8, 5);//peak_height, peak_distance, max_num_peaks 
 
             n_peak_interval_sum = 0;
 
@@ -120,7 +129,11 @@ namespace Playback
                     n_peak_interval_sum += (an_dx_peak_locs[k] - an_dx_peak_locs[k - 1]);
 
                 n_peak_interval_sum = n_peak_interval_sum / (n_npks - 1);
-                pn_heart_rate = (int)(6000 / n_peak_interval_sum);      // Beats per minutes
+
+                // Each data point represent 1/FS second in time so peak internal in seconds is
+                // n_peak_interval_sum * (1 / FS).
+                // The heart rate is 60 / peak interval = 60 * FS / n_peak_interal_sum
+                pn_heart_rate = (int)(60 * FS / n_peak_interval_sum);      // Beats per minutes
                 pch_hr_valid = true;
             }
             else
@@ -149,7 +162,7 @@ namespace Playback
                 m = an_ir_valley_locs[k];
                 n_c_min = 16777216;     //2^24;
 
-                if (m + 5 < BUFFER_SIZE - HAMMING_SIZE && m - 5 > 0)
+                if (m + 5 < n_ir_buffer_length - HAMMING_SIZE && m - 5 > 0)
                 {
                     for (i = m - 5; i < m + 5; i++)
                     {
@@ -178,7 +191,7 @@ namespace Playback
             }
 
             // 4 pt MA
-            for (k = 0; k < BUFFER_SIZE - MA4_SIZE; k++)
+            for (k = 0; k < n_ir_buffer_length - MA4_SIZE; k++)
             {
                 an_x[k] = (an_x[k] + an_x[k + 1] + an_x[k + 2] + an_x[k + 3]) / (int)4;
                 an_y[k] = (an_y[k] + an_y[k + 1] + an_y[k + 2] + an_y[k + 3]) / (int)4;
@@ -194,7 +207,7 @@ namespace Playback
 
             for (k = 0; k < n_exact_ir_valley_locs_count; k++)
             {
-                if (an_exact_ir_valley_locs[k] > BUFFER_SIZE)
+                if (an_exact_ir_valley_locs[k] > n_ir_buffer_length)
                 {
                     pn_spo2 = -999; // do not use SPO2 since valley loc is out of range
                     pch_spo2_valid = false;

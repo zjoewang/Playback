@@ -72,6 +72,7 @@ namespace Playback
         public Form1()
         {
             InitializeComponent();
+            label9.Text = "built on " + DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt");
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -274,8 +275,18 @@ namespace Playback
 
                             try
                             {
-                                m_alg.maxim_heart_rate_and_oxygen_saturation(m_ir_buffer, m_nBufferSize, m_red_buffer,
-                                    out nNewSP, out bSPValid, out nNewHR, out bHRValid);
+                                int window = Convert.ToInt32(textBox1.Text);
+                                int nStart = Algorithm30102.BUFFER_SIZE - window;
+
+                                if (window < 100)
+                                    window = 100;
+                                else if (window > 500)
+                                    window = 500;
+
+                                textBox1.Text = window.ToString();
+
+                                m_alg.maxim_heart_rate_and_oxygen_saturation(m_ir_buffer.Skip(nStart), window,
+                                        m_red_buffer.Skip(nStart), out nNewSP, out bSPValid, out nNewHR, out bHRValid);
                             }
                             catch
                             {
