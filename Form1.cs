@@ -147,6 +147,8 @@ namespace Playback
                 m_srLog.Close();
                 m_srLog = null;
                 timer1.Stop();
+                m_bPaused = false;
+                button3.Text = "Pause";
                 button2_Click(sender, e);
             }
         }
@@ -280,8 +282,8 @@ namespace Playback
 
                                 if (window < 100)
                                     window = 100;
-                                else if (window > 500)
-                                    window = 500;
+                                else if (window > Algorithm30102.BUFFER_SIZE)
+                                    window = Algorithm30102.BUFFER_SIZE;
 
                                 textBox1.Text = window.ToString();
 

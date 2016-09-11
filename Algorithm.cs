@@ -8,7 +8,7 @@ namespace Playback
     public class Algorithm30102
     {
         public const int FS = 100;
-        public const int BUFFER_SIZE = FS * 5;
+        public const int BUFFER_SIZE = FS * 8;
         const int HR_FIFO_SIZE  = 7;
         const int MA4_SIZE = 4;     // DO NOT CHANGE
         const int HAMMING_SIZE = 5;     // DO NOT CHANGE
