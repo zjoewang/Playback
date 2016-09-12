@@ -7,8 +7,7 @@ namespace Playback
 {
     public class Algorithm30102
     {
-        public const int FS = 100;
-        public const int BUFFER_SIZE = FS * 8;
+        public const int BUFFER_SIZE = 800;
         const int HR_FIFO_SIZE  = 7;
         const int MA4_SIZE = 4;     // DO NOT CHANGE
         const int HAMMING_SIZE = 5;     // DO NOT CHANGE
@@ -40,17 +39,18 @@ namespace Playback
          *               Since this algorithm is aiming for Arm M0/M3. formaula for SPO2 did not achieve the accuracy due to register overflow.
          *               Thus, accurate SPO2 is precalculated and save longo uch_spo2_table[] per each ratio.
          *
-         * \param[in]    *pun_ir_buffer           - IR sensor data buffer
+         * \param[in]    sr                      - Sample rate
+         * \param[in]    *pun_ir_buffer          - IR sensor data buffer
          * \param[in]    n_ir_buffer_length      - IR sensor data buffer length
-         * \param[in]    *pun_red_buffer          - Red sensor data buffer
-         * \param[out]    *pn_spo2                - Calculated SpO2 value
-         * \param[out]    *pch_spo2_valid         - 1 if the calculated SpO2 value is valid
-         * \param[out]    *pn_heart_rate          - Calculated heart rate value
-         * \param[out]    *pch_hr_valid           - 1 if the calculated heart rate value is valid
+         * \param[in]    *pun_red_buffer         - Red sensor data buffer
+         * \param[out]    *pn_spo2               - Calculated SpO2 value
+         * \param[out]    *pch_spo2_valid        - 1 if the calculated SpO2 value is valid
+         * \param[out]    *pn_heart_rate         - Calculated heart rate value
+         * \param[out]    *pch_hr_valid          - 1 if the calculated heart rate value is valid
          *
          * \retval       None
          */
-        public void maxim_heart_rate_and_oxygen_saturation(IEnumerable<int> pun_ir_buffer_IEnum, int n_ir_buffer_length, IEnumerable<int> pun_red_buffer_IEnum, out int pn_spo2, out bool pch_spo2_valid,
+        public void maxim_heart_rate_and_oxygen_saturation(int sr, IEnumerable<int> pun_ir_buffer_IEnum, int n_ir_buffer_length, IEnumerable<int> pun_red_buffer_IEnum, out int pn_spo2, out bool pch_spo2_valid,
                 out int pn_heart_rate, out bool pch_hr_valid)
         {
             int[] pun_ir_buffer = pun_ir_buffer_IEnum.ToArray();
@@ -130,10 +130,10 @@ namespace Playback
 
                 n_peak_interval_sum = n_peak_interval_sum / (n_npks - 1);
 
-                // Each data point represent 1/FS second in time so peak internal in seconds is
-                // n_peak_interval_sum * (1 / FS).
-                // The heart rate is 60 / peak interval = 60 * FS / n_peak_interal_sum
-                pn_heart_rate = (int)(60 * FS / n_peak_interval_sum);      // Beats per minutes
+                // Each data point represent 1/sr second in time so peak internal in seconds is
+                // n_peak_interval_sum * (1 / sr).
+                // The heart rate is 60 / peak interval = 60 * sr / n_peak_interal_sum
+                pn_heart_rate = (int)(60 * sr / n_peak_interval_sum);      // Beats per minutes
                 pch_hr_valid = true;
             }
             else

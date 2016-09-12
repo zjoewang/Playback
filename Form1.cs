@@ -73,6 +73,7 @@ namespace Playback
         {
             InitializeComponent();
             label9.Text = "built on " + DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt");
+            comboBox1.SelectedIndex = 1;
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -180,10 +181,15 @@ namespace Playback
 
                     if (match.Success && match.Groups.Count == 3)
                     {
+                        found_hrsp = true;
+
                         hr = Convert.ToInt32(match.Groups[1].Value);
                         sp = Convert.ToInt32(match.Groups[2].Value);
+                        chart1.Series["HR"].Points.AddXY(m_nLastTimeStamp, hr);
+                        chart1.Series["SP"].Points.AddXY(m_nLastTimeStamp, sp);
 
-                        found_hrsp = true;
+                        // Original values
+                        label4.Text = "HR = " + hr.ToString() + ", SP = " + sp.ToString();
                     }
                     else
                     {
@@ -205,20 +211,22 @@ namespace Playback
                             time = Convert.ToInt32(match.Groups[1].Value);
                             red = Convert.ToInt32(match.Groups[2].Value);
                             ir = Convert.ToInt32(match.Groups[3].Value);
+
+                            if (count < MAX_TEMP_SIZE)
+                            {
+                                m_temp_red_buffer[count] = red;
+                                m_temp_ir_buffer[count] = ir;
+                                nTempSize = count + 1;
+                                chart1.Series["Red"].Points.AddXY(time, red);
+                                chart1.Series["IR"].Points.AddXY(time, ir);
+                            }
+
+                            m_nLastTimeStamp = time;
+                            ++count;
                         }
                     }
 
-                    if (found_hrsp)
-                    {
-                        chart1.Series["HR"].Points.AddXY(m_nLastTimeStamp, hr);
-                        chart1.Series["SP"].Points.AddXY(m_nLastTimeStamp, sp);
-
-                        // Original values
-                        label4.Text = "HR = " + hr.ToString() + ", SP = " + sp.ToString();
-
-                    }
-
-                    if (found_hrsp || count >= 100)
+                    if (found_hrsp || count > 100)
                     {
                         int nTotalSize = m_nBufferSize + nTempSize;
 
@@ -268,33 +276,42 @@ namespace Playback
                             m_nBufferSize = nTotalSize;
                         }
 
-                        if (m_nBufferSize >= Algorithm30102.BUFFER_SIZE)
+                        int window = Convert.ToInt32(textBox1.Text);
+
+                        if (window < 100)
+                            window = 100;
+                        else if (window > Algorithm30102.BUFFER_SIZE)
+                            window = Algorithm30102.BUFFER_SIZE;
+
+                        textBox1.Text = window.ToString();
+
+                        if (m_nBufferSize >= window)
                         {
-                            Debug.Assert(m_nBufferSize == Algorithm30102.BUFFER_SIZE);
+                            Debug.Assert(m_nBufferSize <= Algorithm30102.BUFFER_SIZE);
 
                             int nNewHR = -1, nNewSP = -1;
                             bool bHRValid, bSPValid;
 
                             try
                             {
-                                int window = Convert.ToInt32(textBox1.Text);
-                                int nStart = Algorithm30102.BUFFER_SIZE - window;
+                                int nStart = m_nBufferSize - window;
 
-                                if (window < 100)
-                                    window = 100;
-                                else if (window > Algorithm30102.BUFFER_SIZE)
-                                    window = Algorithm30102.BUFFER_SIZE;
+                                int nSelected = comboBox1.SelectedIndex, sr = 100;
 
-                                textBox1.Text = window.ToString();
+                                if (nSelected == 0)
+                                   sr = 50;
+                                else if (nSelected == 1)
+                                   sr = 100;
+                                else if (nSelected == 2)
+                                   sr = 200;
 
-                                m_alg.maxim_heart_rate_and_oxygen_saturation(m_ir_buffer.Skip(nStart), window,
+                                m_alg.maxim_heart_rate_and_oxygen_saturation(sr, m_ir_buffer.Skip(nStart), window,
                                         m_red_buffer.Skip(nStart), out nNewSP, out bSPValid, out nNewHR, out bHRValid);
                             }
                             catch
                             {
                                 bHRValid = bSPValid = false;
                             }
-
 
                             if (!bHRValid)
                                 nNewHR = -1;
@@ -314,24 +331,6 @@ namespace Playback
                             label3.Text = "Not enough raw data";
 
                         break;
-                    }
-                    else if (found_rawdata)
-                    {
-                        if (count < MAX_TEMP_SIZE)
-                        {
-                            m_temp_red_buffer[count] = red;
-                            m_temp_ir_buffer[count] = ir;
-                            nTempSize = count + 1;
-                        }
-
-                        chart1.Series["Red"].Points.AddXY(time, red);
-                        chart1.Series["IR"].Points.AddXY(time, ir);
-                        m_nLastTimeStamp = time;
-                        ++count;
-                    }
-                    else
-                    {
-                        // Debug.Assert(found_rawdata || found_hrsp);
                     }
                 }
 
