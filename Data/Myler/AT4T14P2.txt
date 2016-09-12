@@ -1,0 +1,2075 @@
+AT4T14P2 - Lakota - (7,10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+time=1, red=8, ir=7
+time=8, red=0, ir=7
+time=18, red=9, ir=10
+time=28, red=4, ir=1
+time=38, red=11, ir=0
+time=48, red=3, ir=8
+time=58, red=4, ir=1
+time=68, red=1, ir=0
+time=78, red=0, ir=0
+time=88, red=6, ir=3
+time=98, red=6, ir=0
+time=108, red=6, ir=3
+time=118, red=2, ir=0
+time=128, red=3, ir=0
+time=138, red=12, ir=9
+time=148, red=3, ir=0
+time=158, red=16, ir=0
+time=168, red=2, ir=7
+time=178, red=17, ir=0
+time=188, red=0, ir=13
+time=198, red=7, ir=17
+time=208, red=9, ir=0
+time=218, red=10, ir=10
+time=228, red=0, ir=0
+time=238, red=2, ir=9
+time=248, red=1, ir=8
+time=258, red=10, ir=8
+time=268, red=0, ir=17
+time=278, red=4, ir=0
+time=288, red=0, ir=5
+time=298, red=0, ir=0
+time=308, red=1, ir=5
+time=318, red=0, ir=9
+time=328, red=0, ir=1
+time=338, red=13, ir=9
+time=348, red=1, ir=0
+time=358, red=1, ir=2
+time=368, red=3, ir=9
+time=378, red=2, ir=0
+time=388, red=4, ir=7
+time=398, red=0, ir=6
+time=408, red=0, ir=2
+time=418, red=0, ir=10
+time=428, red=1, ir=0
+time=438, red=2, ir=12
+time=448, red=7, ir=18
+time=458, red=10, ir=12
+time=468, red=6, ir=0
+time=478, red=7, ir=7
+time=488, red=9, ir=0
+time=498, red=0, ir=0
+time=508, red=4, ir=10
+time=518, red=12, ir=7
+time=528, red=23, ir=6
+time=538, red=0, ir=7
+time=548, red=9, ir=0
+time=558, red=0, ir=9
+time=568, red=0, ir=0
+time=578, red=9, ir=4
+time=588, red=3, ir=18
+time=598, red=7, ir=2
+time=608, red=10, ir=5
+time=618, red=2, ir=8
+time=628, red=0, ir=0
+time=638, red=7, ir=3
+time=648, red=11, ir=5
+time=658, red=2, ir=13
+time=668, red=0, ir=14
+time=678, red=10, ir=8
+time=688, red=15, ir=0
+time=698, red=0, ir=4
+time=708, red=8, ir=19
+time=718, red=10, ir=14
+time=728, red=5, ir=0
+time=738, red=7, ir=15
+time=748, red=4, ir=0
+time=758, red=1, ir=0
+time=768, red=7, ir=9
+time=778, red=5, ir=3
+time=788, red=1, ir=0
+time=798, red=0, ir=7
+time=808, red=10, ir=0
+time=818, red=1, ir=2
+time=828, red=1, ir=0
+time=838, red=4, ir=7
+time=848, red=8, ir=9
+time=858, red=3, ir=0
+time=868, red=2, ir=2
+time=878, red=2, ir=9
+time=888, red=6, ir=10
+time=898, red=2, ir=0
+time=908, red=1, ir=0
+time=918, red=2, ir=0
+time=928, red=6, ir=8
+time=938, red=0, ir=5
+time=948, red=10, ir=10
+time=958, red=8, ir=10
+time=968, red=10, ir=2
+time=978, red=1, ir=6
+time=988, red=8, ir=8
+time=998, red=2, ir=11
+time=1008, red=0, ir=2
+time=1018, red=6, ir=11
+time=1028, red=12, ir=13
+time=1038, red=5, ir=8
+time=1048, red=11, ir=0
+time=1058, red=5, ir=5
+time=1068, red=1, ir=8
+time=1078, red=2, ir=0
+time=1088, red=15, ir=6
+time=1098, red=5, ir=8
+time=1108, red=1, ir=6
+time=1118, red=2, ir=4
+time=1128, red=4, ir=0
+time=1138, red=7, ir=11
+time=1148, red=8, ir=6
+time=1158, red=18, ir=8
+time=1168, red=0, ir=0
+time=1178, red=0, ir=6
+time=1188, red=3, ir=10
+time=1198, red=3, ir=16
+time=1208, red=1, ir=15
+time=1218, red=6, ir=0
+time=1228, red=4, ir=12
+time=1238, red=12, ir=0
+time=1248, red=6, ir=8
+time=1258, red=13, ir=6
+time=1268, red=9, ir=3
+time=1278, red=5, ir=16
+time=1288, red=5, ir=0
+time=1298, red=0, ir=1
+time=1308, red=6, ir=2
+time=1318, red=15, ir=0
+time=1328, red=2, ir=3
+time=1338, red=1, ir=4
+time=1348, red=6, ir=0
+time=1357, red=5, ir=3
+time=1367, red=18, ir=7
+time=1377, red=4, ir=0
+time=1387, red=17, ir=2
+time=1397, red=0, ir=11
+time=1407, red=0, ir=10
+time=1417, red=8, ir=6
+time=1427, red=16, ir=3
+time=1437, red=2, ir=11
+time=1447, red=0, ir=0
+time=1457, red=0, ir=4
+time=1467, red=9, ir=10
+time=1477, red=1, ir=0
+time=1487, red=6, ir=7
+time=1497, red=4, ir=3
+time=1507, red=9, ir=4
+time=1517, red=0, ir=8
+time=1527, red=0, ir=0
+time=1537, red=1, ir=3
+time=1547, red=13, ir=4
+time=1557, red=20, ir=10
+time=1567, red=0, ir=9
+time=1577, red=4, ir=0
+time=1587, red=0, ir=8
+time=1597, red=0, ir=4
+time=1607, red=6, ir=0
+time=1617, red=7, ir=16
+time=1627, red=2, ir=0
+time=1637, red=9, ir=0
+time=1647, red=2, ir=16
+time=1657, red=13, ir=6
+time=1667, red=11, ir=8
+time=1677, red=0, ir=7
+time=1687, red=9, ir=0
+time=1697, red=10, ir=13
+time=1707, red=4, ir=2
+time=1717, red=9, ir=1
+time=1727, red=11, ir=3
+time=1737, red=14, ir=3
+time=1747, red=0, ir=0
+time=1757, red=0, ir=7
+time=1767, red=5, ir=5
+time=1777, red=9, ir=12
+time=1787, red=1, ir=0
+time=1797, red=1, ir=3
+time=1807, red=12, ir=13
+time=1817, red=7, ir=10
+time=1827, red=0, ir=0
+time=1837, red=2, ir=10
+time=1847, red=12, ir=14
+time=1857, red=14, ir=6
+time=1867, red=6, ir=0
+time=1877, red=13, ir=12
+time=1887, red=13, ir=0
+time=1897, red=4, ir=0
+time=1907, red=14, ir=0
+time=1917, red=15, ir=1
+time=1927, red=4, ir=4
+time=1937, red=4, ir=9
+time=1947, red=0, ir=3
+time=1957, red=10, ir=1
+time=1967, red=2, ir=2
+time=1977, red=1, ir=2
+time=1987, red=9, ir=9
+time=1997, red=0, ir=5
+time=2007, red=0, ir=6
+time=2017, red=2, ir=0
+time=2027, red=8, ir=9
+time=2037, red=5, ir=19
+time=2047, red=3, ir=19
+time=2057, red=7, ir=9
+time=2067, red=4, ir=0
+time=2077, red=0, ir=16
+time=2087, red=0, ir=0
+time=2097, red=5, ir=9
+time=2107, red=12, ir=0
+time=2117, red=3, ir=15
+time=2127, red=0, ir=5
+time=2137, red=1, ir=4
+time=2147, red=7, ir=0
+time=2157, red=5, ir=3
+time=2167, red=0, ir=0
+time=2177, red=2, ir=14
+time=2187, red=7, ir=7
+time=2197, red=8, ir=8
+time=2207, red=0, ir=2
+time=2217, red=0, ir=0
+time=2227, red=4, ir=2
+time=2237, red=1, ir=3
+time=2247, red=1, ir=16
+time=2257, red=16, ir=0
+time=2267, red=2, ir=9
+time=2277, red=0, ir=0
+time=2287, red=8, ir=0
+time=2297, red=7, ir=4
+time=2307, red=4, ir=0
+time=2317, red=11, ir=5
+time=2327, red=5, ir=0
+time=2337, red=4, ir=12
+time=2347, red=5, ir=8
+time=2357, red=19, ir=1
+time=2367, red=0, ir=2
+time=2377, red=9, ir=1
+time=2387, red=11, ir=11
+time=2397, red=1, ir=0
+time=2407, red=5, ir=4
+time=2417, red=8, ir=8
+time=2427, red=5, ir=0
+time=2437, red=2, ir=12
+time=2447, red=2, ir=1
+time=2457, red=0, ir=4
+time=2467, red=10, ir=11
+time=2477, red=0, ir=11
+time=2487, red=0, ir=9
+time=2497, red=9, ir=8
+time=2507, red=0, ir=7
+time=2517, red=0, ir=0
+time=2527, red=9, ir=0
+time=2537, red=6, ir=15
+time=2547, red=0, ir=9
+time=2557, red=11, ir=0
+time=2567, red=17, ir=0
+time=2577, red=2, ir=2
+time=2587, red=0, ir=0
+time=2597, red=7, ir=13
+time=2607, red=0, ir=0
+time=2617, red=0, ir=3
+time=2627, red=5, ir=9
+time=2637, red=9, ir=16
+time=2647, red=4, ir=6
+time=2657, red=2, ir=0
+time=2667, red=0, ir=10
+time=2677, red=0, ir=0
+time=2687, red=9, ir=11
+time=2697, red=2, ir=8
+time=2707, red=15, ir=0
+time=2717, red=15, ir=7
+time=2727, red=5, ir=8
+time=2737, red=3, ir=4
+time=2747, red=2, ir=0
+time=2757, red=13, ir=11
+time=2767, red=0, ir=2
+time=2777, red=13, ir=15
+time=2787, red=4, ir=3
+time=2797, red=0, ir=0
+time=2807, red=1, ir=6
+time=2817, red=0, ir=9
+time=2827, red=0, ir=5
+time=2837, red=4, ir=7
+time=2847, red=7, ir=13
+time=2857, red=0, ir=5
+time=2867, red=8, ir=0
+time=2877, red=0, ir=2
+time=2887, red=8, ir=2
+time=2897, red=8, ir=0
+time=2907, red=5, ir=1
+time=2917, red=4, ir=1
+time=2927, red=0, ir=0
+time=2937, red=5, ir=10
+time=2947, red=10, ir=8
+time=2957, red=5, ir=0
+time=2967, red=9, ir=6
+time=2977, red=0, ir=0
+time=2987, red=3, ir=8
+time=2997, red=7, ir=3
+time=3007, red=3, ir=3
+time=3017, red=7, ir=1
+time=3027, red=10, ir=6
+time=3037, red=2, ir=14
+time=3047, red=6, ir=10
+time=3057, red=11, ir=19
+time=3067, red=14, ir=11
+time=3077, red=10, ir=0
+time=3087, red=3, ir=10
+time=3097, red=4, ir=9
+time=3107, red=6, ir=9
+time=3117, red=7, ir=8
+time=3127, red=11, ir=15
+time=3137, red=0, ir=3
+time=3147, red=0, ir=8
+time=3157, red=3, ir=1
+time=3167, red=9, ir=0
+time=3177, red=0, ir=0
+time=3187, red=0, ir=0
+time=3197, red=1, ir=6
+time=3207, red=0, ir=7
+time=3217, red=10, ir=7
+time=3227, red=6, ir=10
+time=3237, red=1, ir=0
+time=3247, red=5, ir=1
+time=3257, red=10, ir=2
+time=3267, red=5, ir=0
+time=3277, red=10, ir=12
+time=3287, red=0, ir=3
+time=3297, red=9, ir=0
+time=3307, red=25, ir=0
+time=3317, red=5, ir=1
+time=3327, red=10, ir=2
+time=3337, red=0, ir=7
+time=3347, red=0, ir=0
+time=3357, red=6, ir=11
+time=3367, red=11, ir=2
+time=3377, red=6, ir=18
+time=3387, red=5, ir=9
+time=3397, red=8, ir=7
+time=3407, red=15, ir=4
+time=3417, red=1, ir=7
+time=3427, red=0, ir=0
+time=3437, red=4, ir=10
+time=3447, red=2, ir=10
+time=3457, red=1, ir=7
+time=3467, red=1, ir=6
+time=3477, red=0, ir=14
+time=3487, red=4, ir=8
+time=3497, red=5, ir=0
+time=3507, red=6, ir=9
+time=3517, red=5, ir=6
+time=3527, red=0, ir=0
+time=3537, red=8, ir=4
+time=3547, red=14, ir=0
+time=3557, red=14, ir=12
+time=3567, red=11, ir=4
+time=3577, red=9, ir=3
+time=3587, red=16, ir=0
+time=3597, red=3, ir=0
+time=3607, red=10, ir=3
+time=3617, red=7, ir=0
+time=3627, red=21, ir=4
+time=3637, red=9, ir=2
+time=3647, red=0, ir=0
+time=3657, red=0, ir=13
+time=3667, red=7, ir=8
+time=3677, red=1, ir=3
+time=3687, red=5, ir=0
+time=3697, red=0, ir=2
+time=3707, red=0, ir=0
+time=3717, red=10, ir=6
+time=3727, red=0, ir=0
+time=3737, red=20, ir=2
+time=3747, red=2, ir=2
+time=3757, red=11, ir=0
+time=3767, red=15, ir=7
+time=3777, red=11, ir=1
+time=3787, red=2, ir=9
+time=3797, red=11, ir=9
+time=3807, red=10, ir=3
+time=3817, red=1, ir=8
+time=3827, red=7, ir=0
+time=3837, red=16, ir=10
+time=3847, red=3, ir=2
+time=3857, red=8, ir=5
+time=3867, red=9, ir=1
+time=3877, red=14, ir=11
+time=3887, red=9, ir=0
+time=3897, red=0, ir=0
+time=3907, red=0, ir=0
+time=3917, red=8, ir=3
+time=3927, red=6, ir=6
+time=3937, red=7, ir=3
+time=3947, red=4, ir=0
+time=3957, red=3, ir=0
+time=3967, red=0, ir=0
+time=3977, red=4, ir=0
+time=3987, red=9, ir=6
+time=3997, red=1, ir=0
+time=4007, red=0, ir=0
+time=4017, red=2, ir=0
+time=4027, red=3, ir=8
+time=4037, red=0, ir=8
+time=4047, red=2, ir=14
+time=4057, red=0, ir=2
+time=4067, red=3, ir=0
+time=4077, red=8, ir=10
+time=4087, red=0, ir=3
+time=4097, red=7, ir=0
+time=4107, red=7, ir=3
+time=4117, red=7, ir=0
+time=4127, red=7, ir=0
+time=4137, red=9, ir=2
+time=4147, red=0, ir=0
+time=4157, red=10, ir=5
+time=4167, red=15, ir=0
+time=4177, red=0, ir=6
+time=4187, red=13, ir=3
+time=4197, red=1, ir=2
+time=4207, red=6, ir=4
+time=4217, red=0, ir=2
+time=4227, red=5, ir=2
+time=4237, red=0, ir=0
+time=4247, red=9, ir=0
+time=4257, red=9, ir=5
+time=4267, red=0, ir=0
+time=4277, red=16, ir=0
+time=4287, red=7, ir=5
+time=4297, red=12, ir=0
+time=4307, red=15, ir=10
+time=4317, red=4, ir=4
+time=4327, red=6, ir=14
+time=4337, red=0, ir=0
+time=4347, red=8, ir=6
+time=4357, red=10, ir=12
+time=4367, red=4, ir=7
+time=4377, red=11, ir=0
+time=4387, red=0, ir=0
+time=4397, red=0, ir=0
+time=4407, red=4, ir=0
+time=4417, red=1, ir=0
+time=4427, red=0, ir=4
+time=4437, red=14, ir=11
+time=4447, red=0, ir=7
+time=4457, red=3, ir=6
+time=4467, red=0, ir=0
+time=4477, red=8, ir=8
+time=4487, red=6, ir=18
+time=4497, red=9, ir=6
+time=4507, red=0, ir=11
+time=4517, red=3, ir=5
+time=4527, red=3, ir=0
+time=4537, red=13, ir=1
+time=4547, red=12, ir=7
+time=4557, red=9, ir=0
+time=4567, red=10, ir=0
+time=4577, red=4, ir=0
+time=4587, red=7, ir=0
+time=4597, red=0, ir=0
+time=4607, red=3, ir=0
+time=4617, red=8, ir=1
+time=4627, red=0, ir=4
+time=4637, red=0, ir=11
+time=4647, red=5, ir=19
+time=4657, red=0, ir=9
+time=4667, red=6, ir=12
+time=4677, red=2, ir=0
+time=4687, red=8, ir=0
+time=4697, red=0, ir=0
+time=4707, red=8, ir=2
+time=4717, red=0, ir=21
+time=4727, red=4, ir=12
+time=4737, red=5, ir=6
+time=4747, red=7, ir=8
+time=4757, red=3, ir=3
+time=4767, red=0, ir=16
+time=4777, red=8, ir=1
+time=4787, red=0, ir=5
+time=4797, red=11, ir=0
+time=4807, red=0, ir=0
+time=4817, red=3, ir=0
+time=4827, red=7, ir=0
+time=4837, red=2, ir=0
+time=4847, red=3, ir=3
+time=4857, red=4, ir=4
+time=4867, red=11, ir=4
+time=4877, red=0, ir=6
+time=4887, red=9, ir=2
+time=4897, red=6, ir=4
+time=4907, red=6, ir=10
+time=4917, red=4, ir=2
+time=4927, red=2, ir=3
+time=4937, red=14, ir=5
+time=4947, red=0, ir=0
+time=4957, red=0, ir=8
+time=4967, red=0, ir=3
+time=4977, red=9, ir=25
+time=4987, red=0, ir=11
+time=4997, red=9, ir=9
+time=5007, red=1, ir=8
+time=5017, red=4, ir=19
+time=5027, red=3, ir=8
+time=5037, red=0, ir=1
+time=5047, red=9, ir=1
+time=5057, red=6, ir=0
+time=5067, red=6, ir=3
+time=5077, red=0, ir=15
+time=5087, red=0, ir=10
+time=5097, red=6, ir=5
+time=5107, red=0, ir=0
+time=5117, red=5, ir=21
+time=5127, red=6, ir=0
+time=5137, red=0, ir=0
+time=5147, red=7, ir=0
+time=5157, red=8, ir=0
+time=5167, red=11, ir=2
+time=5177, red=12, ir=4
+time=5187, red=1, ir=8
+time=5197, red=7, ir=4
+time=5207, red=4, ir=9
+time=5217, red=0, ir=0
+time=5227, red=1, ir=4
+time=5237, red=12, ir=1
+time=5247, red=0, ir=1
+time=5257, red=1, ir=5
+time=5267, red=3, ir=0
+time=5277, red=0, ir=4
+time=5287, red=7, ir=0
+time=5297, red=0, ir=0
+time=5307, red=10, ir=8
+time=5317, red=5, ir=11
+time=5327, red=0, ir=13
+time=5337, red=11, ir=0
+time=5347, red=5, ir=11
+time=5357, red=17, ir=2
+time=5367, red=11, ir=10
+time=5377, red=7, ir=9
+time=5387, red=1, ir=8
+time=5397, red=0, ir=1
+time=5407, red=1, ir=19
+time=5417, red=2, ir=0
+time=5427, red=8, ir=4
+time=5437, red=15, ir=0
+time=5447, red=2, ir=3
+time=5457, red=0, ir=0
+time=5467, red=12, ir=4
+time=5477, red=11, ir=1
+time=5487, red=13, ir=10
+time=5497, red=10, ir=7
+time=5507, red=14, ir=0
+time=5517, red=0, ir=15
+time=5527, red=6, ir=0
+time=5537, red=0, ir=3
+time=5547, red=6, ir=12
+time=5557, red=5, ir=3
+time=5567, red=1, ir=13
+time=5577, red=0, ir=4
+time=5587, red=0, ir=5
+time=5597, red=3, ir=0
+time=5607, red=8, ir=9
+time=5617, red=0, ir=0
+time=5627, red=10, ir=4
+time=5637, red=4, ir=4
+time=5647, red=11, ir=0
+time=5657, red=8, ir=12
+time=5667, red=3, ir=9
+time=5677, red=5, ir=11
+time=5687, red=0, ir=8
+time=5697, red=2, ir=0
+time=5707, red=3, ir=17
+time=5717, red=2, ir=0
+time=5727, red=12, ir=5
+time=5737, red=9, ir=0
+time=5747, red=10, ir=4
+time=5757, red=14, ir=1
+time=5767, red=11, ir=0
+time=5777, red=3, ir=2
+time=5787, red=7, ir=5
+time=5797, red=9, ir=0
+time=5807, red=0, ir=2
+time=5817, red=12, ir=5
+time=5827, red=0, ir=7
+time=5837, red=3, ir=14
+time=5847, red=0, ir=0
+time=5857, red=0, ir=17
+time=5867, red=8, ir=12
+time=5877, red=0, ir=0
+time=5887, red=0, ir=3
+time=5897, red=3, ir=1
+time=5907, red=12, ir=3
+time=5917, red=14, ir=0
+time=5927, red=0, ir=0
+time=5937, red=0, ir=18
+time=5947, red=16, ir=6
+time=5957, red=7, ir=5
+time=5967, red=0, ir=2
+time=5977, red=0, ir=2
+time=5987, red=8, ir=12
+HR=187, SP=-1
+time=6012, red=0, ir=11
+time=6017, red=4, ir=5
+time=6027, red=5, ir=3
+time=6037, red=0, ir=27
+time=6047, red=0, ir=0
+time=6057, red=12, ir=5
+time=6067, red=0, ir=2
+time=6077, red=0, ir=12
+time=6087, red=11, ir=0
+time=6097, red=0, ir=4
+time=6107, red=6, ir=0
+time=6117, red=9, ir=4
+time=6127, red=2, ir=8
+time=6137, red=4, ir=0
+time=6146, red=16, ir=8
+time=6156, red=10, ir=0
+time=6166, red=7, ir=1
+time=6176, red=0, ir=0
+time=6186, red=3, ir=9
+time=6196, red=1, ir=13
+time=6206, red=4, ir=0
+time=6216, red=6, ir=0
+time=6226, red=2, ir=0
+time=6236, red=1, ir=0
+time=6246, red=12, ir=0
+time=6256, red=3, ir=0
+time=6266, red=0, ir=6
+time=6276, red=0, ir=25
+time=6286, red=9, ir=1
+time=6296, red=7, ir=1
+time=6306, red=9, ir=0
+time=6316, red=6, ir=0
+time=6326, red=15, ir=3
+time=6336, red=10, ir=9
+time=6346, red=9, ir=10
+time=6356, red=6, ir=11
+time=6366, red=9, ir=0
+time=6376, red=0, ir=6
+time=6386, red=5, ir=7
+time=6396, red=13, ir=0
+time=6406, red=7, ir=2
+time=6416, red=3, ir=2
+time=6426, red=9, ir=11
+time=6436, red=0, ir=8
+time=6446, red=19, ir=11
+time=6456, red=6, ir=0
+time=6466, red=0, ir=24
+time=6476, red=0, ir=0
+time=6486, red=11, ir=3
+time=6496, red=3, ir=4
+time=6506, red=0, ir=4
+time=6516, red=14, ir=4
+time=6526, red=13, ir=1
+time=6536, red=2, ir=10
+time=6546, red=10, ir=0
+time=6556, red=2, ir=10
+time=6566, red=2, ir=6
+time=6576, red=7, ir=11
+time=6586, red=11, ir=11
+time=6596, red=0, ir=2
+time=6606, red=0, ir=1
+time=6616, red=11, ir=0
+time=6626, red=8, ir=3
+time=6636, red=13, ir=0
+time=6646, red=2, ir=4
+time=6656, red=2, ir=0
+time=6666, red=9, ir=15
+time=6676, red=9, ir=0
+time=6686, red=6, ir=2
+time=6696, red=0, ir=12
+time=6706, red=8, ir=3
+time=6716, red=16, ir=9
+time=6726, red=20, ir=10
+time=6736, red=1, ir=4
+time=6746, red=5, ir=0
+time=6756, red=3, ir=13
+time=6766, red=1, ir=15
+time=6776, red=0, ir=9
+time=6786, red=5, ir=8
+time=6796, red=3, ir=9
+time=6806, red=11, ir=2
+time=6816, red=2, ir=6
+time=6826, red=0, ir=14
+time=6836, red=3, ir=5
+time=6846, red=0, ir=7
+time=6856, red=1, ir=4
+time=6866, red=4, ir=3
+time=6876, red=0, ir=0
+time=6886, red=4, ir=8
+time=6896, red=9, ir=23
+time=6906, red=5, ir=7
+time=6916, red=13, ir=1
+time=6926, red=7, ir=10
+time=6936, red=9, ir=5
+time=6946, red=7, ir=5
+time=6956, red=8, ir=12
+time=6966, red=14, ir=0
+time=6976, red=8, ir=0
+time=6986, red=0, ir=0
+time=6996, red=0, ir=9
+HR=240, SP=-1
+time=7006, red=6, ir=0
+time=7016, red=6, ir=0
+time=7026, red=0, ir=5
+time=7036, red=0, ir=4
+time=7046, red=15, ir=0
+time=7056, red=0, ir=11
+time=7066, red=7, ir=2
+time=7076, red=3, ir=11
+time=7086, red=3, ir=0
+time=7096, red=7, ir=0
+time=7106, red=0, ir=0
+time=7116, red=2, ir=2
+time=7126, red=0, ir=1
+time=7136, red=4, ir=12
+time=7146, red=7, ir=15
+time=7156, red=0, ir=2
+time=7166, red=9, ir=10
+time=7176, red=0, ir=0
+time=7186, red=12, ir=17
+time=7196, red=1, ir=5
+time=7206, red=0, ir=1
+time=7216, red=14, ir=12
+time=7226, red=6, ir=11
+time=7236, red=0, ir=15
+time=7246, red=5, ir=0
+time=7256, red=3, ir=13
+time=7266, red=6, ir=8
+time=7276, red=0, ir=3
+time=7286, red=0, ir=5
+time=7296, red=0, ir=6
+time=7306, red=8, ir=4
+time=7316, red=1, ir=0
+time=7326, red=12, ir=9
+time=7336, red=16, ir=7
+time=7346, red=16, ir=0
+time=7356, red=4, ir=5
+time=7366, red=17, ir=4
+time=7376, red=0, ir=6
+time=7386, red=8, ir=8
+time=7396, red=0, ir=0
+time=7406, red=5, ir=0
+time=7416, red=6, ir=2
+time=7426, red=11, ir=0
+time=7436, red=7, ir=8
+time=7446, red=5, ir=3
+time=7456, red=11, ir=1
+time=7466, red=15, ir=6
+time=7476, red=0, ir=0
+time=7486, red=0, ir=0
+time=7496, red=8, ir=8
+time=7506, red=7, ir=3
+time=7516, red=10, ir=6
+time=7526, red=3, ir=0
+time=7536, red=3, ir=0
+time=7546, red=1, ir=3
+time=7556, red=0, ir=2
+time=7566, red=3, ir=3
+time=7576, red=2, ir=0
+time=7586, red=12, ir=6
+time=7596, red=0, ir=0
+time=7606, red=8, ir=11
+time=7616, red=8, ir=1
+time=7626, red=3, ir=0
+time=7636, red=3, ir=10
+time=7646, red=0, ir=2
+time=7656, red=0, ir=9
+time=7666, red=1, ir=2
+time=7676, red=16, ir=6
+time=7686, red=0, ir=3
+time=7696, red=1, ir=5
+time=7706, red=9, ir=0
+time=7716, red=0, ir=13
+time=7726, red=0, ir=0
+time=7736, red=6, ir=0
+time=7746, red=0, ir=9
+time=7756, red=0, ir=0
+time=7766, red=0, ir=9
+time=7776, red=1, ir=4
+time=7786, red=0, ir=11
+time=7796, red=5, ir=0
+time=7806, red=4, ir=11
+time=7816, red=9, ir=0
+time=7826, red=3, ir=8
+time=7836, red=6, ir=3
+time=7846, red=8, ir=0
+time=7856, red=2, ir=0
+time=7866, red=0, ir=0
+time=7876, red=12, ir=1
+time=7886, red=4, ir=0
+time=7896, red=4, ir=0
+time=7906, red=17, ir=6
+time=7916, red=0, ir=0
+time=7926, red=3, ir=6
+time=7936, red=9, ir=7
+time=7946, red=2, ir=7
+time=7956, red=0, ir=3
+time=7966, red=9, ir=13
+time=7976, red=5, ir=6
+time=7986, red=13, ir=4
+time=7996, red=0, ir=0
+HR=176, SP=-1
+time=8020, red=4, ir=0
+time=8026, red=5, ir=5
+time=8036, red=9, ir=11
+time=8046, red=17, ir=3
+time=8056, red=9, ir=0
+time=8066, red=7, ir=0
+time=8076, red=0, ir=8
+time=8086, red=9, ir=13
+time=8096, red=5, ir=10
+time=8106, red=0, ir=0
+time=8116, red=0, ir=0
+time=8126, red=12, ir=7
+time=8136, red=11, ir=13
+time=8146, red=6, ir=0
+time=8156, red=5, ir=0
+time=8166, red=0, ir=1
+time=8176, red=0, ir=17
+time=8186, red=0, ir=0
+time=8196, red=3, ir=3
+time=8206, red=9, ir=4
+time=8216, red=8, ir=8
+time=8226, red=8, ir=6
+time=8236, red=10, ir=1
+time=8246, red=0, ir=8
+time=8256, red=18, ir=0
+time=8266, red=0, ir=0
+time=8276, red=1, ir=13
+time=8286, red=7, ir=13
+time=8296, red=6, ir=0
+time=8306, red=0, ir=3
+time=8316, red=4, ir=16
+time=8326, red=7, ir=5
+time=8336, red=9, ir=2
+time=8346, red=4, ir=1
+time=8356, red=5, ir=5
+time=8366, red=6, ir=0
+time=8376, red=6, ir=7
+time=8386, red=10, ir=9
+time=8396, red=5, ir=9
+time=8406, red=15, ir=4
+time=8416, red=2, ir=0
+time=8426, red=1, ir=9
+time=8436, red=0, ir=10
+time=8446, red=21, ir=10
+time=8456, red=11, ir=5
+time=8466, red=0, ir=10
+time=8476, red=3, ir=17
+time=8486, red=4, ir=0
+time=8496, red=0, ir=0
+time=8506, red=0, ir=0
+time=8516, red=4, ir=5
+time=8526, red=8, ir=1
+time=8536, red=9, ir=17
+time=8546, red=4, ir=9
+time=8556, red=1, ir=4
+time=8566, red=0, ir=0
+time=8576, red=0, ir=0
+time=8586, red=0, ir=1
+time=8596, red=17, ir=7
+time=8606, red=17, ir=0
+time=8616, red=0, ir=8
+time=8626, red=3, ir=4
+time=8636, red=6, ir=2
+time=8646, red=13, ir=1
+time=8656, red=0, ir=13
+time=8666, red=4, ir=4
+time=8676, red=0, ir=8
+time=8686, red=0, ir=2
+time=8696, red=10, ir=6
+time=8706, red=1, ir=0
+time=8716, red=8, ir=0
+time=8726, red=9, ir=0
+time=8736, red=0, ir=0
+time=8746, red=0, ir=0
+time=8756, red=9, ir=0
+time=8766, red=1, ir=0
+time=8776, red=12, ir=2
+time=8786, red=7, ir=6
+time=8796, red=5, ir=0
+time=8806, red=5, ir=18
+time=8816, red=0, ir=1
+time=8826, red=4, ir=10
+time=8836, red=17, ir=1
+time=8846, red=5, ir=6
+time=8856, red=0, ir=0
+time=8866, red=4, ir=12
+time=8876, red=0, ir=3
+time=8886, red=5, ir=0
+time=8896, red=1, ir=0
+time=8906, red=0, ir=14
+time=8916, red=7, ir=7
+time=8926, red=10, ir=8
+time=8936, red=4, ir=0
+time=8946, red=3, ir=1
+time=8956, red=0, ir=6
+time=8966, red=5, ir=0
+time=8976, red=0, ir=0
+time=8986, red=7, ir=0
+time=8996, red=6, ir=2
+time=9006, red=1, ir=3
+HR=375, SP=-1
+time=9016, red=11, ir=1
+time=9026, red=0, ir=0
+time=9036, red=6, ir=2
+time=9046, red=3, ir=9
+time=9056, red=4, ir=12
+time=9066, red=7, ir=10
+time=9076, red=11, ir=3
+time=9086, red=7, ir=0
+time=9096, red=5, ir=5
+time=9106, red=0, ir=0
+time=9116, red=9, ir=5
+time=9126, red=6, ir=5
+time=9136, red=0, ir=5
+time=9146, red=1, ir=4
+time=9156, red=16, ir=3
+time=9166, red=4, ir=0
+time=9176, red=14, ir=0
+time=9186, red=4, ir=4
+time=9196, red=5, ir=4
+time=9206, red=4, ir=0
+time=9216, red=10, ir=6
+time=9226, red=0, ir=0
+time=9236, red=5, ir=7
+time=9246, red=1, ir=8
+time=9256, red=15, ir=0
+time=9266, red=4, ir=2
+time=9276, red=3, ir=3
+time=9286, red=5, ir=8
+time=9296, red=10, ir=0
+time=9306, red=0, ir=9
+time=9316, red=7, ir=0
+time=9326, red=0, ir=5
+time=9336, red=2, ir=9
+time=9346, red=17, ir=12
+time=9356, red=2, ir=4
+time=9366, red=8, ir=17
+time=9376, red=3, ir=5
+time=9386, red=0, ir=0
+time=9396, red=0, ir=1
+time=9406, red=0, ir=0
+time=9416, red=5, ir=0
+time=9426, red=4, ir=13
+time=9436, red=9, ir=5
+time=9446, red=15, ir=11
+time=9456, red=5, ir=1
+time=9466, red=3, ir=0
+time=9476, red=2, ir=15
+time=9486, red=0, ir=18
+time=9496, red=0, ir=0
+time=9506, red=15, ir=0
+time=9516, red=0, ir=9
+time=9526, red=5, ir=0
+time=9536, red=3, ir=7
+time=9546, red=5, ir=3
+time=9556, red=0, ir=7
+time=9566, red=0, ir=9
+time=9576, red=6, ir=0
+time=9586, red=8, ir=18
+time=9596, red=0, ir=0
+time=9606, red=12, ir=5
+time=9616, red=0, ir=0
+time=9626, red=13, ir=2
+time=9636, red=5, ir=3
+time=9646, red=8, ir=2
+time=9656, red=2, ir=0
+time=9666, red=8, ir=0
+time=9676, red=0, ir=0
+time=9686, red=0, ir=0
+time=9696, red=6, ir=0
+time=9706, red=1, ir=4
+time=9716, red=0, ir=0
+time=9726, red=0, ir=11
+time=9736, red=7, ir=0
+time=9746, red=11, ir=0
+time=9756, red=7, ir=11
+time=9766, red=0, ir=0
+time=9776, red=5, ir=0
+time=9786, red=12, ir=3
+time=9796, red=6, ir=3
+time=9806, red=0, ir=0
+time=9816, red=11, ir=3
+time=9826, red=0, ir=0
+time=9836, red=6, ir=4
+time=9846, red=2, ir=0
+time=9856, red=5, ir=1
+time=9866, red=0, ir=2
+time=9876, red=5, ir=7
+time=9886, red=6, ir=8
+time=9896, red=5, ir=5
+time=9906, red=3, ir=5
+time=9916, red=8, ir=10
+time=9926, red=0, ir=6
+time=9936, red=4, ir=2
+time=9946, red=7, ir=10
+time=9956, red=0, ir=6
+time=9966, red=11, ir=4
+time=9976, red=2, ir=0
+time=9986, red=8, ir=6
+time=9996, red=18, ir=10
+time=10006, red=0, ir=0
+HR=206, SP=-1
+time=10031, red=8, ir=0
+time=10035, red=0, ir=3
+time=10045, red=0, ir=6
+time=10055, red=2, ir=17
+time=10065, red=11, ir=9
+time=10075, red=0, ir=7
+time=10085, red=12, ir=4
+time=10095, red=2, ir=7
+time=10105, red=0, ir=0
+time=10115, red=13, ir=2
+time=10125, red=1, ir=15
+time=10135, red=7, ir=4
+time=10145, red=5, ir=0
+time=10155, red=3, ir=13
+time=10165, red=11, ir=4
+time=10175, red=2, ir=0
+time=10185, red=12, ir=7
+time=10195, red=6, ir=0
+time=10205, red=6, ir=13
+time=10215, red=7, ir=9
+time=10225, red=9, ir=0
+time=10235, red=1, ir=5
+time=10245, red=8, ir=0
+time=10255, red=0, ir=4
+time=10265, red=0, ir=8
+time=10275, red=11, ir=4
+time=10285, red=0, ir=1
+time=10295, red=8, ir=11
+time=10305, red=1, ir=9
+time=10315, red=3, ir=0
+time=10325, red=8, ir=0
+time=10335, red=5, ir=5
+time=10345, red=17, ir=6
+time=10355, red=5, ir=0
+time=10365, red=9, ir=0
+time=10375, red=14, ir=7
+time=10385, red=0, ir=23
+time=10395, red=0, ir=6
+time=10405, red=0, ir=6
+time=10415, red=6, ir=3
+time=10425, red=7, ir=3
+time=10435, red=0, ir=6
+time=10445, red=0, ir=8
+time=10455, red=10, ir=0
+time=10465, red=4, ir=8
+time=10475, red=0, ir=1
+time=10485, red=7, ir=2
+time=10495, red=5, ir=0
+time=10505, red=0, ir=10
+time=10515, red=12, ir=8
+time=10525, red=4, ir=8
+time=10535, red=15, ir=0
+time=10545, red=0, ir=7
+time=10555, red=9, ir=7
+time=10565, red=5, ir=0
+time=10575, red=0, ir=0
+time=10585, red=9, ir=2
+time=10595, red=4, ir=0
+time=10605, red=12, ir=17
+time=10615, red=15, ir=11
+time=10625, red=0, ir=5
+time=10635, red=2, ir=7
+time=10645, red=3, ir=1
+time=10655, red=0, ir=0
+time=10665, red=8, ir=0
+time=10675, red=10, ir=0
+time=10685, red=0, ir=7
+time=10695, red=13, ir=1
+time=10705, red=0, ir=8
+time=10715, red=16, ir=10
+time=10725, red=4, ir=1
+time=10735, red=0, ir=3
+time=10745, red=0, ir=0
+time=10755, red=11, ir=2
+time=10765, red=6, ir=5
+time=10775, red=10, ir=11
+time=10785, red=7, ir=7
+time=10795, red=1, ir=9
+time=10805, red=1, ir=3
+time=10815, red=10, ir=3
+time=10825, red=2, ir=12
+time=10835, red=10, ir=7
+time=10845, red=0, ir=20
+time=10855, red=1, ir=0
+time=10865, red=0, ir=13
+time=10875, red=0, ir=13
+time=10885, red=12, ir=5
+time=10895, red=6, ir=7
+time=10905, red=1, ir=0
+time=10915, red=0, ir=7
+time=10925, red=13, ir=9
+time=10935, red=7, ir=3
+time=10945, red=12, ir=5
+time=10955, red=7, ir=9
+time=10965, red=0, ir=8
+time=10975, red=0, ir=0
+time=10985, red=9, ir=6
+time=10995, red=1, ir=9
+time=11005, red=7, ir=5
+time=11015, red=0, ir=0
+HR=117, SP=-1
+time=11025, red=6, ir=0
+time=11035, red=0, ir=0
+time=11045, red=3, ir=0
+time=11055, red=2, ir=4
+time=11065, red=7, ir=6
+time=11075, red=2, ir=4
+time=11085, red=10, ir=8
+time=11095, red=9, ir=0
+time=11105, red=0, ir=7
+time=11115, red=6, ir=0
+time=11125, red=17, ir=4
+time=11135, red=0, ir=0
+time=11145, red=10, ir=0
+time=11155, red=8, ir=5
+time=11165, red=0, ir=10
+time=11175, red=0, ir=0
+time=11185, red=0, ir=8
+time=11195, red=0, ir=0
+time=11205, red=14, ir=0
+time=11215, red=12, ir=9
+time=11225, red=14, ir=10
+time=11235, red=11, ir=1
+time=11245, red=0, ir=3
+time=11255, red=3, ir=6
+time=11265, red=3, ir=8
+time=11275, red=9, ir=4
+time=11285, red=10, ir=0
+time=11295, red=0, ir=5
+time=11305, red=8, ir=5
+time=11315, red=0, ir=10
+time=11325, red=3, ir=2
+time=11335, red=10, ir=0
+time=11345, red=0, ir=0
+time=11355, red=9, ir=13
+time=11365, red=2, ir=4
+time=11375, red=3, ir=11
+time=11385, red=1, ir=3
+time=11395, red=15, ir=1
+time=11405, red=8, ir=0
+time=11415, red=0, ir=12
+time=11425, red=20, ir=4
+time=11435, red=0, ir=0
+time=11445, red=0, ir=1
+time=11455, red=6, ir=18
+time=11465, red=0, ir=10
+time=11475, red=0, ir=6
+time=11485, red=5, ir=3
+time=11495, red=3, ir=0
+time=11505, red=1, ir=6
+time=11515, red=0, ir=0
+time=11525, red=1, ir=2
+time=11535, red=0, ir=9
+time=11545, red=1, ir=2
+time=11555, red=8, ir=10
+time=11565, red=3, ir=1
+time=11575, red=0, ir=0
+time=11585, red=5, ir=8
+time=11595, red=0, ir=8
+time=11605, red=2, ir=0
+time=11615, red=9, ir=4
+time=11625, red=1, ir=10
+time=11635, red=7, ir=9
+time=11645, red=7, ir=10
+time=11655, red=0, ir=5
+time=11665, red=8, ir=0
+time=11675, red=25, ir=0
+time=11685, red=3, ir=0
+time=11695, red=3, ir=5
+time=11705, red=8, ir=0
+time=11715, red=0, ir=2
+time=11725, red=3, ir=5
+time=11735, red=6, ir=6
+time=11745, red=4, ir=7
+time=11755, red=0, ir=9
+time=11765, red=0, ir=0
+time=11775, red=0, ir=9
+time=11785, red=13, ir=9
+time=11795, red=11, ir=8
+time=11805, red=2, ir=3
+time=11815, red=8, ir=6
+time=11825, red=7, ir=11
+time=11835, red=0, ir=0
+time=11845, red=1, ir=8
+time=11855, red=0, ir=3
+time=11865, red=4, ir=5
+time=11875, red=0, ir=6
+time=11885, red=10, ir=0
+time=11895, red=10, ir=24
+time=11905, red=11, ir=0
+time=11915, red=16, ir=7
+time=11925, red=0, ir=3
+time=11935, red=3, ir=1
+time=11945, red=11, ir=8
+time=11955, red=0, ir=19
+time=11965, red=3, ir=9
+time=11975, red=0, ir=7
+time=11985, red=2, ir=0
+time=11995, red=8, ir=9
+time=12005, red=5, ir=13
+time=12015, red=6, ir=0
+HR=333, SP=-1
+time=12039, red=6, ir=6
+time=12045, red=0, ir=17
+time=12055, red=11, ir=0
+time=12065, red=0, ir=4
+time=12075, red=7, ir=2
+time=12085, red=4, ir=0
+time=12095, red=11, ir=8
+time=12105, red=6, ir=8
+time=12115, red=1, ir=0
+time=12125, red=0, ir=0
+time=12135, red=11, ir=10
+time=12145, red=5, ir=7
+time=12155, red=3, ir=0
+time=12165, red=11, ir=8
+time=12175, red=1, ir=0
+time=12185, red=0, ir=0
+time=12195, red=22, ir=5
+time=12205, red=4, ir=3
+time=12215, red=8, ir=7
+time=12225, red=6, ir=4
+time=12235, red=0, ir=1
+time=12245, red=3, ir=10
+time=12255, red=6, ir=4
+time=12265, red=3, ir=9
+time=12275, red=12, ir=4
+time=12285, red=11, ir=7
+time=12295, red=0, ir=0
+time=12305, red=6, ir=5
+time=12315, red=3, ir=5
+time=12325, red=0, ir=8
+time=12335, red=4, ir=0
+time=12345, red=0, ir=5
+time=12355, red=4, ir=14
+time=12365, red=17, ir=2
+time=12375, red=4, ir=2
+time=12385, red=0, ir=0
+time=12395, red=9, ir=4
+time=12405, red=12, ir=3
+time=12415, red=2, ir=0
+time=12425, red=11, ir=5
+time=12435, red=6, ir=15
+time=12445, red=2, ir=10
+time=12455, red=10, ir=5
+time=12465, red=4, ir=1
+time=12475, red=5, ir=1
+time=12485, red=6, ir=4
+time=12495, red=8, ir=7
+time=12505, red=7, ir=9
+time=12515, red=18, ir=0
+time=12525, red=4, ir=0
+time=12535, red=5, ir=12
+time=12545, red=1, ir=0
+time=12555, red=4, ir=5
+time=12565, red=0, ir=3
+time=12575, red=7, ir=15
+time=12585, red=8, ir=6
+time=12595, red=0, ir=8
+time=12605, red=0, ir=0
+time=12615, red=11, ir=3
+time=12625, red=0, ir=4
+time=12635, red=14, ir=4
+time=12645, red=8, ir=9
+time=12655, red=7, ir=2
+time=12665, red=0, ir=2
+time=12675, red=10, ir=1
+time=12685, red=7, ir=6
+time=12695, red=0, ir=0
+time=12705, red=6, ir=3
+time=12715, red=6, ir=12
+time=12725, red=0, ir=11
+time=12735, red=8, ir=0
+time=12745, red=0, ir=12
+time=12755, red=3, ir=12
+time=12765, red=6, ir=4
+time=12775, red=16, ir=0
+time=12785, red=1, ir=1
+time=12795, red=9, ir=12
+time=12805, red=2, ir=13
+time=12815, red=0, ir=8
+time=12825, red=9, ir=4
+time=12835, red=8, ir=13
+time=12845, red=0, ir=1
+time=12855, red=12, ir=13
+time=12865, red=6, ir=2
+time=12875, red=1, ir=13
+time=12885, red=0, ir=0
+time=12895, red=7, ir=10
+time=12905, red=0, ir=0
+time=12915, red=5, ir=14
+time=12925, red=1, ir=0
+time=12935, red=13, ir=0
+time=12945, red=0, ir=4
+time=12955, red=7, ir=3
+time=12965, red=2, ir=0
+time=12975, red=6, ir=7
+time=12985, red=0, ir=0
+time=12995, red=0, ir=16
+time=13005, red=15, ir=10
+time=13015, red=3, ir=16
+time=13025, red=0, ir=13
+HR=333, SP=-1
+time=13035, red=0, ir=0
+time=13045, red=0, ir=9
+time=13055, red=1, ir=3
+time=13065, red=14, ir=0
+time=13075, red=4, ir=5
+time=13085, red=0, ir=8
+time=13095, red=5, ir=5
+time=13105, red=5, ir=4
+time=13115, red=17, ir=0
+time=13125, red=2, ir=15
+time=13135, red=16, ir=1
+time=13145, red=1, ir=3
+time=13155, red=9, ir=10
+time=13165, red=3, ir=0
+time=13175, red=6, ir=7
+time=13185, red=12, ir=0
+time=13195, red=5, ir=2
+time=13205, red=0, ir=0
+time=13215, red=4, ir=1
+time=13225, red=1, ir=0
+time=13235, red=0, ir=7
+time=13245, red=6, ir=3
+time=13255, red=0, ir=10
+time=13265, red=3, ir=7
+time=13275, red=9, ir=0
+time=13285, red=6, ir=7
+time=13295, red=4, ir=22
+time=13305, red=12, ir=1
+time=13315, red=0, ir=2
+time=13325, red=0, ir=3
+time=13335, red=0, ir=7
+time=13345, red=2, ir=3
+time=13355, red=0, ir=0
+time=13365, red=1, ir=13
+time=13375, red=8, ir=1
+time=13385, red=3, ir=5
+time=13395, red=5, ir=0
+time=13405, red=5, ir=0
+time=13415, red=9, ir=1
+time=13425, red=15, ir=8
+time=13435, red=4, ir=8
+time=13445, red=0, ir=0
+time=13455, red=5, ir=7
+time=13465, red=16, ir=7
+time=13475, red=9, ir=3
+time=13485, red=7, ir=6
+time=13495, red=5, ir=0
+time=13505, red=2, ir=5
+time=13515, red=4, ir=10
+time=13525, red=10, ir=0
+time=13535, red=8, ir=8
+time=13545, red=10, ir=0
+time=13555, red=3, ir=4
+time=13565, red=10, ir=15
+time=13575, red=4, ir=0
+time=13585, red=0, ir=6
+time=13595, red=3, ir=0
+time=13605, red=14, ir=4
+time=13615, red=12, ir=0
+time=13625, red=0, ir=0
+time=13635, red=2, ir=4
+time=13645, red=5, ir=5
+time=13655, red=2, ir=21
+time=13665, red=4, ir=20
+time=13675, red=14, ir=0
+time=13685, red=0, ir=0
+time=13695, red=5, ir=3
+time=13705, red=0, ir=6
+time=13715, red=3, ir=6
+time=13725, red=13, ir=3
+time=13735, red=8, ir=11
+time=13745, red=5, ir=0
+time=13755, red=15, ir=0
+time=13765, red=0, ir=2
+time=13775, red=6, ir=16
+time=13785, red=11, ir=3
+time=13795, red=6, ir=0
+time=13805, red=6, ir=7
+time=13815, red=11, ir=0
+time=13825, red=16, ir=0
+time=13835, red=0, ir=6
+time=13845, red=4, ir=0
+time=13855, red=0, ir=12
+time=13865, red=6, ir=0
+time=13875, red=8, ir=3
+time=13885, red=0, ir=10
+time=13894, red=17, ir=0
+time=13904, red=0, ir=0
+time=13914, red=8, ir=8
+time=13924, red=8, ir=1
+time=13934, red=7, ir=6
+time=13944, red=3, ir=6
+time=13954, red=2, ir=11
+time=13964, red=6, ir=5
+time=13974, red=13, ir=0
+time=13984, red=0, ir=12
+time=13994, red=6, ir=0
+time=14004, red=11, ir=3
+time=14014, red=7, ir=1
+time=14024, red=0, ir=5
+HR=193, SP=-1
+time=14050, red=4, ir=0
+time=14054, red=2, ir=8
+time=14064, red=2, ir=0
+time=14074, red=0, ir=1
+time=14084, red=9, ir=0
+time=14094, red=5, ir=3
+time=14104, red=4, ir=0
+time=14114, red=1, ir=8
+time=14124, red=6, ir=0
+time=14134, red=0, ir=5
+time=14144, red=14, ir=1
+time=14154, red=18, ir=0
+time=14164, red=11, ir=8
+time=14174, red=6, ir=12
+time=14184, red=0, ir=16
+time=14194, red=7, ir=0
+time=14204, red=2, ir=6
+time=14214, red=7, ir=11
+time=14224, red=5, ir=17
+time=14234, red=1, ir=2
+time=14244, red=0, ir=0
+time=14254, red=3, ir=1
+time=14264, red=1, ir=0
+time=14274, red=7, ir=5
+time=14284, red=0, ir=0
+time=14294, red=11, ir=10
+time=14304, red=7, ir=3
+time=14314, red=0, ir=16
+time=14324, red=10, ir=0
+time=14334, red=3, ir=5
+time=14344, red=1, ir=11
+time=14354, red=0, ir=0
+time=14364, red=2, ir=0
+time=14374, red=0, ir=4
+time=14384, red=10, ir=16
+time=14394, red=0, ir=0
+time=14404, red=21, ir=2
+time=14414, red=0, ir=0
+time=14424, red=3, ir=15
+time=14434, red=5, ir=5
+time=14444, red=0, ir=0
+time=14454, red=0, ir=7
+time=14464, red=10, ir=3
+time=14474, red=4, ir=2
+time=14484, red=17, ir=2
+time=14494, red=8, ir=0
+time=14504, red=0, ir=2
+time=14514, red=7, ir=11
+time=14524, red=12, ir=6
+time=14534, red=9, ir=15
+time=14544, red=0, ir=0
+time=14554, red=0, ir=10
+time=14564, red=3, ir=6
+time=14574, red=20, ir=1
+time=14584, red=3, ir=4
+time=14594, red=0, ir=0
+time=14604, red=9, ir=10
+time=14614, red=16, ir=5
+time=14624, red=0, ir=15
+time=14634, red=14, ir=0
+time=14644, red=8, ir=7
+time=14764, red=0, ir=0
+time=14767, red=0, ir=0
+Start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press any key to start conversion
+

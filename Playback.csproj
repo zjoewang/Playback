@@ -69,6 +69,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Content Include="Data\JoeThumb.txt" />
+    <None Include="Data\JoeThumb_excel.csv" />
+    <None Include="Data\Myler\AT4T17P2" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -84,6 +87,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Equine Logo Gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\BRYCETONGUE1-RAW.txt" />
+    <Content Include="Data\Mizzou\AT3T1.txt" />
+    <Content Include="Data\Mizzou\AT3T10.txt" />
+    <Content Include="Data\Mizzou\AT3T11.txt" />
+    <Content Include="Data\Mizzou\AT3T2.txt" />
+    <Content Include="Data\Mizzou\AT3T3.txt" />
+    <Content Include="Data\Mizzou\AT3T4.txt" />
+    <Content Include="Data\Mizzou\AT3T5.txt" />
+    <Content Include="Data\Mizzou\AT3T6.txt" />
+    <Content Include="Data\Mizzou\AT3T7.txt" />
+    <Content Include="Data\Mizzou\AT3T8.txt" />
+    <Content Include="Data\Mizzou\AT3T9.txt" />
+    <Content Include="Data\Myler\AT4T10P2.txt" />
+    <Content Include="Data\Myler\AT4T11P2.txt" />
+    <Content Include="Data\Myler\AT4T12P2.txt" />
+    <Content Include="Data\Myler\AT4T13P2.txt" />
+    <Content Include="Data\Myler\AT4T14P2.txt" />
+    <Content Include="Data\Myler\AT4T15P2.txt" />
+    <Content Include="Data\Myler\AT4T16P2.txt" />
+    <Content Include="Data\Myler\AT4T18P2.txt" />
+    <Content Include="Data\Myler\AT4T19P2.txt" />
+    <Content Include="Data\Myler\AT4T1P1.txt" />
+    <Content Include="Data\Myler\AT4T20P2.txt" />
+    <Content Include="Data\Myler\AT4T21P2.txt" />
+    <Content Include="Data\Myler\AT4T22P2.txt" />
+    <Content Include="Data\Myler\AT4T23P2.txt" />
+    <Content Include="Data\Myler\AT4T24P2.txt" />
+    <Content Include="Data\Myler\AT4T25P2.txt" />
+    <Content Include="Data\Myler\AT4T26P2.txt" />
+    <Content Include="Data\Myler\AT4T27P2.txt" />
+    <Content Include="Data\Myler\AT4T28P1.txt" />
+    <Content Include="Data\Myler\AT4T29P1.txt" />
+    <Content Include="Data\Myler\AT4T2P1.txt" />
+    <Content Include="Data\Myler\AT4T30P1.txt" />
+    <Content Include="Data\Myler\AT4T31P3.txt" />
+    <Content Include="Data\Myler\AT4T32P3.txt" />
+    <Content Include="Data\Myler\AT4T33P2.txt" />
+    <Content Include="Data\Myler\AT4T34P2.txt" />
+    <Content Include="Data\Myler\AT4T35P3.txt" />
+    <Content Include="Data\Myler\AT4T3P1.txt" />
+    <Content Include="Data\Myler\AT4T4P1.txt" />
+    <Content Include="Data\Myler\AT4T5P1.txt" />
+    <Content Include="Data\Myler\AT4T6P1.txt" />
+    <Content Include="Data\Myler\AT4T7P1.txt" />
+    <Content Include="Data\Myler\AT4T8P1.txt" />
+    <Content Include="Data\Myler\AT4T9P1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
