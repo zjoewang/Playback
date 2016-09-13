@@ -56,8 +56,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Resources\Play1.png" />
-    <None Include="Resources\Play.png" />
+    <Content Include="Resources\Equine Logo GIF.gif" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,9 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Equine Logo Gif.gif" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\BRYCETONGUE1-RAW.txt" />
@@ -138,6 +134,7 @@
     <Content Include="Data\Myler\AT4T8P1.txt" />
     <Content Include="Data\Myler\AT4T9P1.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
