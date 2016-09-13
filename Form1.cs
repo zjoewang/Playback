@@ -91,6 +91,8 @@ namespace Playback
                 m_srLog.Close();
                 m_srLog = null;
             }
+
+            button7.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -359,6 +361,11 @@ namespace Playback
             {
                 chart1.Titles[0].Text = value;
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Process.Start("notepad.exe", m_logFile);
         }
     }
 }
