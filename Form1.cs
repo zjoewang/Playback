@@ -367,5 +367,20 @@ namespace Playback
         {
             Process.Start("notepad.exe", m_logFile);
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            // Raw reflectance
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            // HR and SP
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            // AC/DC
+        }
     }
 }
