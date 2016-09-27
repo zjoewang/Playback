@@ -27,6 +27,11 @@ namespace Playback
         private int[] m_temp_ir_buffer = new int[MAX_TEMP_SIZE];
         private int m_nBufferSize = 0;
         private Algorithm30102 m_alg = new Algorithm30102();
+        private bool m_bShowHRSP = true;
+        private bool m_bShowACDC = true;
+        private bool m_bShowRaw = true;
+        private bool m_bShowNewHRSP = true;
+        
         public static DialogResult InputBox(string title, string promptText, ref string value)
         {
             Form form = new Form();
@@ -125,6 +130,10 @@ namespace Playback
                 chart1.Series["newSP"].Points.Clear();
                 chart1.Series["Red"].Points.Clear();
                 chart1.Series["IR"].Points.Clear();
+                chart1.Series["Green"].Points.Clear();
+                chart1.Series["AD for Red"].Points.Clear();
+                chart1.Series["AD for IR"].Points.Clear();
+                chart1.Series["AD for Green"].Points.Clear();
                 button2.Enabled = false;
                 timer1.Start();
             }
@@ -371,16 +380,35 @@ namespace Playback
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             // Raw reflectance
+            m_bShowRaw = checkBox1.Checked;
+            chart1.Series["Red"].Enabled = m_bShowRaw;
+            chart1.Series["IR"].Enabled = m_bShowRaw;
+            chart1.Series["Green"].Enabled = m_bShowRaw;
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             // HR and SP
+            m_bShowHRSP = checkBox2.Checked;
+            chart1.Series["HR"].Enabled = m_bShowHRSP;
+            chart1.Series["SP"].Enabled = m_bShowHRSP;
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             // AC/DC
+            m_bShowACDC = checkBox3.Checked;
+            chart1.Series["AD for Red"].Enabled = m_bShowACDC;
+            chart1.Series["AD for IR"].Enabled = m_bShowACDC;
+            chart1.Series["AD for Green"].Enabled = m_bShowACDC;
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            // New HR & SP
+            m_bShowNewHRSP = checkBox4.Checked;
+            chart1.Series["newHR"].Enabled = m_bShowNewHRSP;
+            chart1.Series["newSP"].Enabled = m_bShowNewHRSP;
         }
     }
 }
