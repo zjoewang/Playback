@@ -21,10 +21,12 @@ namespace Playback
         private System.IO.StreamReader m_srLog = null;
         private int m_nLastTimeStamp = -1;
         private int[] m_red_buffer = new int[Algorithm30102.BUFFER_SIZE];
+        private int[] m_time_buffer = new int[Algorithm30102.BUFFER_SIZE];
         private int[] m_ir_buffer = new int[Algorithm30102.BUFFER_SIZE];
         private const int MAX_TEMP_SIZE = 10 * Algorithm30102.BUFFER_SIZE;
         private int[] m_temp_red_buffer = new int[MAX_TEMP_SIZE];
         private int[] m_temp_ir_buffer = new int[MAX_TEMP_SIZE];
+        private int[] m_temp_time_buffer = new int[MAX_TEMP_SIZE];
         private int m_nBufferSize = 0;
         private Algorithm30102 m_alg = new Algorithm30102();
         private bool m_bShowHRSP = true;
@@ -227,6 +229,7 @@ namespace Playback
                             {
                                 m_temp_red_buffer[count] = red;
                                 m_temp_ir_buffer[count] = ir;
+                                m_temp_time_buffer[count] = time;
                                 nTempSize = count + 1;
                                 chart1.Series["Red"].Points.AddXY(time, red);
                                 chart1.Series["IR"].Points.AddXY(time, ir);
@@ -250,6 +253,7 @@ namespace Playback
                             {
                                 m_red_buffer[i] = m_temp_red_buffer[i + nLeftShift];
                                 m_ir_buffer[i] = m_temp_ir_buffer[i + nLeftShift];
+                                m_time_buffer[i] = m_temp_time_buffer[i + nLeftShift];
                             }
 
                             m_nBufferSize = Algorithm30102.BUFFER_SIZE;
@@ -264,6 +268,7 @@ namespace Playback
                             {
                                 m_red_buffer[i] = m_red_buffer[i + nLeftShift];
                                 m_ir_buffer[i] = m_ir_buffer[i + nLeftShift];
+                                m_time_buffer[i] = m_time_buffer[i + nLeftShift];
                             }
 
                             // Then copy the whole temp to fill the system buffer
@@ -271,6 +276,7 @@ namespace Playback
                             {
                                 m_red_buffer[i] = m_temp_red_buffer[i - nKeep];
                                 m_ir_buffer[i] = m_temp_ir_buffer[i - nKeep];
+                                m_time_buffer[i] = m_temp_time_buffer[i - nKeep];
                             }
 
                             m_nBufferSize = Algorithm30102.BUFFER_SIZE;
@@ -282,6 +288,7 @@ namespace Playback
                             {
                                 m_red_buffer[i] = m_temp_red_buffer[i - m_nBufferSize];
                                 m_ir_buffer[i] = m_temp_ir_buffer[i - m_nBufferSize];
+                                m_time_buffer[i] = m_temp_time_buffer[i - m_nBufferSize];
                             }
 
                             m_nBufferSize = nTotalSize;
@@ -316,8 +323,16 @@ namespace Playback
                                 else if (nSelected == 2)
                                    sr = 200;
 
+                                RData rdata = new RData();
+
                                 m_alg.maxim_heart_rate_and_oxygen_saturation(sr, m_ir_buffer.Skip(nStart), window,
-                                        m_red_buffer.Skip(nStart), out nNewSP, out bSPValid, out nNewHR, out bHRValid);
+                                        m_red_buffer.Skip(nStart), out nNewSP, out bSPValid, out nNewHR,
+                                        out bHRValid, rdata);
+
+                                for (int i = 0; i < rdata.m_size; ++i)
+                                {
+                                    chart1.Series["newHR"].Points.AddXY(m_nLastTimeStamp, nNewHR);
+                                }
                             }
                             catch
                             {

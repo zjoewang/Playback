@@ -5,6 +5,14 @@ using System.Linq;
 
 namespace Playback
 {
+    public class RData
+    {
+        static int s_max_size = 256;
+        public int[] m_indices = new int[s_max_size];
+        public int[] m_ratios = new int[s_max_size];
+        public int m_size = 0;
+    }
+
     public class Algorithm30102
     {
         public const int BUFFER_SIZE = 1500;
@@ -51,7 +59,7 @@ namespace Playback
          * \retval       None
          */
         public void maxim_heart_rate_and_oxygen_saturation(int sr, IEnumerable<int> pun_ir_buffer_IEnum, int n_ir_buffer_length, IEnumerable<int> pun_red_buffer_IEnum, out int pn_spo2, out bool pch_spo2_valid,
-                out int pn_heart_rate, out bool pch_hr_valid)
+                out int pn_heart_rate, out bool pch_hr_valid, RData rdata)
         {
             int[] pun_ir_buffer = pun_ir_buffer_IEnum.ToArray();
             int[] pun_red_buffer = pun_red_buffer_IEnum.ToArray();
@@ -244,6 +252,9 @@ namespace Playback
                     if (n_denom > 0 && n_i_ratio_count < 5 && n_nume != 0)
                     {
                         an_ratio[n_i_ratio_count] = (n_nume * 100) / n_denom; //formular is ( n_y_ac *n_x_dc_max) / ( n_x_ac *n_y_dc_max) ;
+                        rdata.m_ratios[rdata.m_size] = an_ratio[n_i_ratio_count];
+                        rdata.m_indices[rdata.m_size] = (n_x_dc_max_idx + n_y_dc_max_idx) / 2;
+                        ++rdata.m_size;
                         n_i_ratio_count++;
                     }
                 }
