@@ -331,7 +331,10 @@ namespace Playback
 
                                 for (int i = 0; i < rdata.m_size; ++i)
                                 {
-                                    chart1.Series["newHR"].Points.AddXY(m_nLastTimeStamp, nNewHR);
+                                    chart1.Series["AD for Red"].Points.AddXY(m_time_buffer[nStart + rdata.m_red_indices[i]],
+                                            rdata.m_red_ratios[i]);
+                                    chart1.Series["AD for IR"].Points.AddXY(m_time_buffer[nStart + rdata.m_ir_indices[i]],
+                                            rdata.m_ir_ratios[i]);
                                 }
                             }
                             catch
@@ -424,6 +427,11 @@ namespace Playback
             m_bShowNewHRSP = checkBox4.Checked;
             chart1.Series["newHR"].Enabled = m_bShowNewHRSP;
             chart1.Series["newSP"].Enabled = m_bShowNewHRSP;
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

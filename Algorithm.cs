@@ -8,8 +8,10 @@ namespace Playback
     public class RData
     {
         static int s_max_size = 256;
-        public int[] m_indices = new int[s_max_size];
-        public int[] m_ratios = new int[s_max_size];
+        public int[] m_red_indices = new int[s_max_size];
+        public int[] m_red_ratios = new int[s_max_size];
+        public int[] m_ir_indices = new int[s_max_size];
+        public int[] m_ir_ratios = new int[s_max_size];
         public int m_size = 0;
     }
 
@@ -251,10 +253,13 @@ namespace Playback
 
                     if (n_denom > 0 && n_i_ratio_count < 5 && n_nume != 0)
                     {
-                        an_ratio[n_i_ratio_count] = (n_nume * 100) / n_denom; //formular is ( n_y_ac *n_x_dc_max) / ( n_x_ac *n_y_dc_max) ;
-                        rdata.m_ratios[rdata.m_size] = an_ratio[n_i_ratio_count];
-                        rdata.m_indices[rdata.m_size] = (n_x_dc_max_idx + n_y_dc_max_idx) / 2;
+                        rdata.m_red_ratios[rdata.m_size] = 10000 * n_y_ac / n_y_dc_max;
+                        rdata.m_red_indices[rdata.m_size] = n_y_dc_max_idx;
+                        rdata.m_ir_ratios[rdata.m_size] = 10000 * n_x_ac / n_x_dc_max;
+                        rdata.m_ir_indices[rdata.m_size] = n_x_dc_max_idx;
                         ++rdata.m_size;
+
+                        an_ratio[n_i_ratio_count] = (n_nume * 100) / n_denom; //formular is ( n_y_ac *n_x_dc_max) / ( n_x_ac *n_y_dc_max) ;
                         n_i_ratio_count++;
                     }
                 }

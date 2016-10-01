@@ -267,17 +267,17 @@
             series7.Legend = "Legend1";
             series7.Name = "Green";
             series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             series8.Legend = "Legend1";
             series8.Name = "AD for Red";
             series8.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
             series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             series9.Legend = "Legend1";
             series9.Name = "AD for IR";
             series9.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
             series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             series10.Legend = "Legend1";
             series10.Name = "AD for Green";
             this.chart1.Series.Add(series1);
@@ -296,6 +296,7 @@
             title1.Name = "Title1";
             title1.Text = "Alpha Testing";
             this.chart1.Titles.Add(title1);
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // timer1
             // 
