@@ -58,6 +58,7 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button8 = new System.Windows.Forms.Button();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -72,7 +73,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -213,7 +213,7 @@
             chartArea1.AxisY.MajorGrid.Enabled = false;
             chartArea1.AxisY.Title = "Reflectances";
             chartArea1.AxisY2.MajorGrid.Enabled = false;
-            chartArea1.AxisY2.Title = "HR / SPO2%";
+            chartArea1.AxisY2.Title = "HR | %SpO2 | AC/DC*10,000";
             chartArea1.CursorX.IsUserEnabled = true;
             chartArea1.CursorX.IsUserSelectionEnabled = true;
             chartArea1.CursorY.IsUserEnabled = true;
@@ -297,6 +297,7 @@
             title1.Name = "Title1";
             title1.Text = "Alpha Testing";
             this.chart1.Titles.Add(title1);
+            this.chart1.GetToolTipText += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs>(this.chart1_GetToolTipText);
             // 
             // timer1
             // 
@@ -346,6 +347,16 @@
             this.splitContainer1.Size = new System.Drawing.Size(859, 483);
             this.splitContainer1.SplitterDistance = 144;
             this.splitContainer1.TabIndex = 13;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(506, 120);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 27;
+            this.button8.Text = "Flip Y Axes";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // checkBox4
             // 
@@ -503,16 +514,6 @@
             this.button2.Text = "Play";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(506, 120);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 27;
-            this.button8.Text = "Flip Y Axes";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Form1
             // 

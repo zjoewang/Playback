@@ -15,6 +15,150 @@ namespace Playback
         public int m_size = 0;
     }
 
+    public class FilterData
+    {
+        private static int s_max_points = 100;
+        private double[] m_good_points = new double[s_max_points];
+        private double[] m_bad_points = new double[s_max_points];
+        private int m_num_good_points = 0;
+        private int m_num_bad_points = 0;
+        private int m_num_good_points_avg = 10;
+        private int m_num_bad_points_reset = 10;
+        private double m_sd_factor = 2.0;
+        private int m_current_weight = 50;
+        private int m_update_sd_max = 5;
+        private int m_update_sd_count = 0;
+        private double m_avg;
+        private double m_sd = 5.0;
+        private double m_value;
+
+        // num_good_points: the number of good measurements to get the average and SD (standard deviation)
+        // num_bad_points: if these number of "bad" measurements were taken at somep oint, then use them
+        //     (bad points) to reset init_value/init_sd (perhaps measurement object changed, etc)
+        // sd_factor: we accept the current measurement if it is within prev_value +/- sd_factor * prev_sd
+        // init_value/init_sd: starting (reasonable) values
+        // update_sd: how often (number of "good" measurements before SD is re-calculated) sd is updated
+        //     (it doesn't change much and can be computationally expensive)
+        public FilterData(int num_good_points, int num_bad_points, double sd_factor, int current_weight,
+                          double init_value, double init_sd, int update_sd)
+        {
+            if (num_good_points > 0 || num_good_points < s_max_points)
+                m_num_good_points_avg = num_good_points;
+
+            if (num_bad_points > 0 || num_bad_points < s_max_points)
+                m_num_bad_points_reset = num_bad_points;
+
+            if (sd_factor > 0.0)
+                m_sd_factor = sd_factor;
+
+            if (current_weight > 0 && current_weight <= 100)
+                m_current_weight = current_weight;
+
+            if (current_weight > 0 || num_bad_points < s_max_points)
+                m_num_bad_points_reset = num_bad_points;
+
+            if (update_sd > 0)
+                m_update_sd_max = update_sd;
+
+            m_good_points[m_num_good_points++] = init_value;
+            m_value = m_avg = init_value;
+
+            if (init_sd > 0.0)
+                m_sd = init_sd;
+        }
+
+        // Return true if accepted
+        public bool AddPoint(double val)
+        {
+            bool update = false;
+
+            if (val >= m_avg - m_sd_factor * m_sd && val <= m_avg + m_sd_factor * m_sd)
+            {
+                if (m_num_good_points >= m_num_good_points_avg)
+                {
+                    Debug.Assert(m_num_good_points == m_num_good_points_avg);
+
+                    // Left shift
+                    for (int i = 1; i < m_num_good_points; ++i)
+                        m_good_points[i - 1] = m_good_points[i];
+
+                    m_good_points[m_num_good_points - 1] = val;
+                }
+                else
+                    m_good_points[m_num_good_points++] = val;
+
+                // Reset the bad count
+                m_num_bad_points = 0;
+                update = true;
+            }
+            else
+            {
+                Debug.Assert(m_num_bad_points < m_num_bad_points_reset);
+                m_bad_points[m_num_bad_points++] = val;
+
+                if (m_num_bad_points >= m_num_bad_points_reset)
+                {
+                    // OK, enough is enough.  Role swapping
+                    for (int i = 0; i < m_num_bad_points; ++i)
+                        m_good_points[i] = m_bad_points[i];
+
+                    m_num_good_points = m_num_bad_points;
+                    m_num_bad_points = 0;
+                    update = true;
+                }
+            }
+
+            if (update)
+            {
+                int num_avg = Math.Min(m_num_good_points, m_num_good_points_avg);
+
+                Debug.Assert(num_avg >= 1);
+
+                if (m_num_good_points == 1)
+                    m_avg = m_value = m_good_points[0];
+                else
+                {
+                    m_avg = 0.0;
+
+                    for (int i = m_num_good_points - num_avg; i < m_num_good_points; ++i)
+                        m_avg += m_good_points[i];
+
+                    double last_point = m_good_points[m_num_good_points - 1];
+
+                    double prev_avg = (m_avg - last_point) / (double) (m_num_good_points - 1); 
+
+                    m_avg /= (double) num_avg;
+                    m_value = 0.01 * (m_current_weight * last_point + (100 - m_current_weight) * prev_avg);
+                }
+
+                if (++m_update_sd_count >= m_update_sd_max)
+                {
+                    m_update_sd_count = 0;
+                    
+                    // Update standard deviation
+                    if (m_num_good_points > 1)
+                    {
+                        m_sd = 0.0;
+
+                        for (int i = m_num_good_points - num_avg; i < m_num_good_points; ++i)
+                            m_sd += (m_good_points[i] - m_avg) * (m_good_points[i] - m_avg);
+
+                        m_sd = Math.Sqrt(m_sd / (double) (num_avg));
+                    }
+                }
+
+                return true;
+            }
+            else
+                return false;
+        }
+
+        public double GetValue()
+        {
+            return m_value;
+        }
+    }
+
     public class Algorithm30102
     {
         public const int BUFFER_SIZE = 1500;

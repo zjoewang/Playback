@@ -33,6 +33,8 @@ namespace Playback
         private bool m_bShowACDC = true;
         private bool m_bShowRaw = true;
         private bool m_bShowNewHRSP = true;
+        private FilterData m_sp_filter = new FilterData(10, 8, 2.0, 50, 95.0, 5.0, 5);
+        private FilterData m_hr_filter = new FilterData(10, 8, 3.0, 50, 60.0, 15.0, 5);
         
         public static DialogResult InputBox(string title, string promptText, ref string value)
         {
@@ -90,7 +92,7 @@ namespace Playback
             label2.Text = m_logFile;
             button2.Enabled = true;
             button3.Enabled = true;
-            button4.Enabled = true;
+            button4.Enabled = false;
             m_nStep = -1;
 
             if (m_srLog != null)
@@ -348,6 +350,18 @@ namespace Playback
                             if (!bSPValid)
                                 nNewSP = -1;
 
+                            if (nNewHR > 20 && nNewHR <= 200)
+                            {
+                                if (m_hr_filter.AddPoint((double)nNewHR))
+                                    nNewHR = (int) Math.Round(m_hr_filter.GetValue());
+                            }
+
+                            if (nNewSP > 0 && nNewSP <= 100)
+                            {
+                                if (m_sp_filter.AddPoint((double)nNewSP))
+                                    nNewSP = (int) Math.Round(m_sp_filter.GetValue());
+                            }
+
                             label3.Text = "HR = " + nNewHR.ToString() + ", SP = " + nNewSP.ToString();
 
                             if (nNewHR > 0)
@@ -366,6 +380,8 @@ namespace Playback
                 if (line == null)       // EOF
                 {
                     button2.Enabled = true;
+                    button3.Enabled = false;
+                    button4.Enabled = false;
                     m_srLog.Close();
                     m_srLog = null;
                     m_nStep = -1;
@@ -460,6 +476,18 @@ namespace Playback
 
             // Restart
             button4_Click(sender, e);
+        }
+
+        private void chart1_GetToolTipText(object sender, System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs e)
+        {
+            // Check selected chart element and set tooltip text for it
+            switch (e.HitTestResult.ChartElementType)
+            {
+                case System.Windows.Forms.DataVisualization.Charting.ChartElementType.DataPoint:
+                    var dataPoint = e.HitTestResult.Series.Points[e.HitTestResult.PointIndex];
+                    e.Text = string.Format("X:\t{0}\nY:\t{1}", dataPoint.XValue, dataPoint.YValues[0]);
+                    break;
+            }
         }
     }
 }
