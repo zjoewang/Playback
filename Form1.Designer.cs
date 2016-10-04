@@ -72,6 +72,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -101,11 +102,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(521, 124);
+            this.label1.Location = new System.Drawing.Point(595, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 13);
+            this.label1.Size = new System.Drawing.Size(120, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Copyright(c) 2016 Equine SmartBit LLC,";
+            this.label1.Text = "Copyright(c) 2016, ESB,";
             // 
             // label2
             // 
@@ -290,13 +291,12 @@
             this.chart1.Series.Add(series8);
             this.chart1.Series.Add(series9);
             this.chart1.Series.Add(series10);
-            this.chart1.Size = new System.Drawing.Size(859, 299);
+            this.chart1.Size = new System.Drawing.Size(859, 335);
             this.chart1.TabIndex = 12;
             this.chart1.Text = "chart1";
             title1.Name = "Title1";
             title1.Text = "Alpha Testing";
             this.chart1.Titles.Add(title1);
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // timer1
             // 
@@ -313,6 +313,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button8);
             this.splitContainer1.Panel1.Controls.Add(this.checkBox4);
             this.splitContainer1.Panel1.Controls.Add(this.checkBox3);
             this.splitContainer1.Panel1.Controls.Add(this.checkBox2);
@@ -342,7 +343,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.chart1);
-            this.splitContainer1.Size = new System.Drawing.Size(859, 447);
+            this.splitContainer1.Size = new System.Drawing.Size(859, 483);
             this.splitContainer1.SplitterDistance = 144;
             this.splitContainer1.TabIndex = 13;
             // 
@@ -503,11 +504,21 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(506, 120);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 27;
+            this.button8.Text = "Flip Y Axes";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 447);
+            this.ClientSize = new System.Drawing.Size(859, 483);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Reflectance Playback";
@@ -554,6 +565,7 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Button button8;
     }
 }
 

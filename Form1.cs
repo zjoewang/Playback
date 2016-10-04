@@ -429,9 +429,37 @@ namespace Playback
             chart1.Series["newSP"].Enabled = m_bShowNewHRSP;
         }
 
-        private void chart1_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
+            // Flip primarhy
+            chart1.SuspendLayout();
 
+            System.Windows.Forms.DataVisualization.Charting.AxisType old_raw_type = chart1.Series["IR"].YAxisType,
+                new_raw_type = old_raw_type == System.Windows.Forms.DataVisualization.Charting.AxisType.Primary ?
+                    System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary :
+                    System.Windows.Forms.DataVisualization.Charting.AxisType.Primary,
+                new_other_type = old_raw_type;
+
+            string old_primary_label = chart1.ChartAreas["ChartArea1"].AxisY.Title;
+
+            chart1.ChartAreas["ChartArea1"].AxisY.Title = chart1.ChartAreas["ChartArea1"].AxisY2.Title;
+            chart1.ChartAreas["ChartArea1"].AxisY2.Title = old_primary_label;
+
+            chart1.Series["Red"].YAxisType = new_raw_type;
+            chart1.Series["IR"].YAxisType = new_raw_type;
+            chart1.Series["Green"].YAxisType = new_raw_type;
+            chart1.Series["HR"].YAxisType = new_other_type;
+            chart1.Series["SP"].YAxisType = new_other_type;
+            chart1.Series["newHR"].YAxisType = new_other_type;
+            chart1.Series["newSP"].YAxisType = new_other_type;
+            chart1.Series["AD for Red"].YAxisType = new_other_type;
+            chart1.Series["AD for IR"].YAxisType = new_other_type;
+            chart1.Series["AD for Green"].YAxisType = new_other_type;
+
+            chart1.ResumeLayout();
+
+            // Restart
+            button4_Click(sender, e);
         }
     }
 }
