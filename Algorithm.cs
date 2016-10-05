@@ -30,6 +30,7 @@ namespace Playback
         private int m_update_sd_count = 0;
         private double m_avg;
         private double m_sd = 5.0;
+        private double m_min_sd = 0.5;
         private double m_value;
 
         // num_good_points: the number of good measurements to get the average and SD (standard deviation)
@@ -39,8 +40,9 @@ namespace Playback
         // init_value/init_sd: starting (reasonable) values
         // update_sd: how often (number of "good" measurements before SD is re-calculated) sd is updated
         //     (it doesn't change much and can be computationally expensive)
+        // min_sd: sometimes, SD could yield to 0 so the routine become unyielding so this helps with that
         public FilterData(int num_good_points, int num_bad_points, double sd_factor, int current_weight,
-                          double init_value, double init_sd, int update_sd)
+                          double init_value, double init_sd, int update_sd, double min_sd)
         {
             if (num_good_points > 0 || num_good_points < s_max_points)
                 m_num_good_points_avg = num_good_points;
@@ -63,7 +65,10 @@ namespace Playback
             m_good_points[m_num_good_points++] = init_value;
             m_value = m_avg = init_value;
 
-            if (init_sd > 0.0)
+            if (min_sd > 0.0)
+                m_min_sd = min_sd;
+
+            if (init_sd >= m_min_sd)
                 m_sd = init_sd;
         }
 
@@ -104,6 +109,7 @@ namespace Playback
 
                     m_num_good_points = m_num_bad_points;
                     m_num_bad_points = 0;
+                    m_update_sd_count = m_update_sd_max;        // Force SD to update
                     update = true;
                 }
             }
@@ -144,6 +150,9 @@ namespace Playback
                             m_sd += (m_good_points[i] - m_avg) * (m_good_points[i] - m_avg);
 
                         m_sd = Math.Sqrt(m_sd / (double) (num_avg));
+
+                        if (m_sd < m_min_sd)
+                            m_sd = m_min_sd;
                     }
                 }
 

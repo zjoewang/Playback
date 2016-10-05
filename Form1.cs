@@ -33,8 +33,10 @@ namespace Playback
         private bool m_bShowACDC = true;
         private bool m_bShowRaw = true;
         private bool m_bShowNewHRSP = true;
-        private FilterData m_sp_filter = new FilterData(10, 8, 2.0, 50, 95.0, 5.0, 5);
-        private FilterData m_hr_filter = new FilterData(10, 8, 3.0, 50, 60.0, 15.0, 5);
+        private FilterData m_sp_filter = new FilterData(10, 8, 1.0, 50, 95.0, 5.0, 5, 1.0);
+        private FilterData m_hr_filter = new FilterData(10, 8, 1.5, 50, 50.0, 20.0, 5, 2.0);
+        private bool m_bHasHRData = false;
+        private bool m_bHasSPData = false;
         
         public static DialogResult InputBox(string title, string promptText, ref string value)
         {
@@ -128,6 +130,8 @@ namespace Playback
 
                 m_nStep = 0;
                 m_nBufferSize = 0;
+                m_bHasHRData = false;
+                m_bHasSPData = false;
                 chart1.Series["HR"].Points.Clear();
                 chart1.Series["SP"].Points.Clear();
                 chart1.Series["newHR"].Points.Clear();
@@ -139,6 +143,7 @@ namespace Playback
                 chart1.Series["AD for IR"].Points.Clear();
                 chart1.Series["AD for Green"].Points.Clear();
                 button2.Enabled = false;
+                button4.Enabled = true;
                 timer1.Start();
             }
         }
@@ -164,6 +169,8 @@ namespace Playback
                 m_srLog = null;
                 timer1.Stop();
                 m_bPaused = false;
+                m_bHasHRData = false;
+                m_bHasSPData = false;
                 button3.Text = "Pause";
                 button2_Click(sender, e);
             }
@@ -353,14 +360,28 @@ namespace Playback
                             if (nNewHR > 20 && nNewHR <= 200)
                             {
                                 if (m_hr_filter.AddPoint((double)nNewHR))
-                                    nNewHR = (int) Math.Round(m_hr_filter.GetValue());
+                                    m_bHasHRData = true;
+                                else
+                                    nNewHR = -1;
                             }
+                            else
+                                nNewHR = -1;
 
-                            if (nNewSP > 0 && nNewSP <= 100)
+                            if (m_bHasHRData)
+                                nNewHR = (int) Math.Round(m_hr_filter.GetValue());
+
+                            if (nNewSP > 50 && nNewSP <= 100)
                             {
                                 if (m_sp_filter.AddPoint((double)nNewSP))
-                                    nNewSP = (int) Math.Round(m_sp_filter.GetValue());
+                                    m_bHasSPData = true;
+                                else
+                                    nNewSP = -1;
                             }
+                            else
+                                nNewSP = -1;
+
+                            if (m_bHasSPData)
+                                nNewSP = (int) Math.Round(m_sp_filter.GetValue());
 
                             label3.Text = "HR = " + nNewHR.ToString() + ", SP = " + nNewSP.ToString();
 
